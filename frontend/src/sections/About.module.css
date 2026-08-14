@@ -1,0 +1,140 @@
+.aboutSection {
+  padding: 6rem 5%;
+  max-width: 1280px;
+  margin: 0 auto;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+.header {
+  margin-bottom: 4rem;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  line-height: 1.1;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.divider {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
+  opacity: 0.5;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bioCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 2.5rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.bioCard p {
+  margin: 0 0 1.5rem 0;
+}
+
+.bioCard p:last-child {
+  margin-bottom: 0;
+}
+
+.infoCards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.infoCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  transition: transform .35s cubic-bezier(.22,1,.36,1), border-color .35s, box-shadow .35s;
+}
+
+.infoCard:hover {
+  border-color: rgba(0, 212, 170, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px -30px rgba(0, 212, 170, 0.3);
+}
+
+.iconWrapper {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: rgba(0, 212, 170, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.infoContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.infoLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.infoValue {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,332 @@
+/* ============================================================
+   GLOBAL DESIGN SYSTEM — Mohammad Saquib AI Portfolio
+   "Nebula" Theme — Premium dark with neon cyan accent
+   ============================================================ */
+
+/* ---- Design Tokens ---- */
+:root {
+  --bg-void: #06060f;
+  --bg-surface: rgba(255, 255, 255, 0.025);
+  --bg-surface-elevated: rgba(255, 255, 255, 0.045);
+  --bg-surface-hover: rgba(255, 255, 255, 0.06);
+
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-medium: rgba(255, 255, 255, 0.1);
+  --border-glow: rgba(0, 212, 170, 0.25);
+
+  --text-primary: #eaeaf2;
+  --text-secondary: #9ca3af;
+  --text-muted: #4b5563;
+  --text-inverse: #06060f;
+
+  --accent: #00d4aa;
+  --accent-bright: #00f5c4;
+  --accent-dim: rgba(0, 212, 170, 0.12);
+  --accent-secondary: #6366f1;
+  --accent-tertiary: #14b8a6;
+
+  --user-bubble-from: #131330;
+  --user-bubble-to: #182040;
+
+  --radius-xl: 24px;
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --shadow-glow: 0 0 0 1px rgba(0, 212, 170, 0.25), 0 22px 60px -22px rgba(0, 212, 170, 0.45);
+}
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+html, body, #root {
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-void);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img, svg, video, canvas {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+::selection {
+  background: var(--accent-dim);
+  color: var(--accent-bright);
+}
+
+/* ---- Particle Canvas ---- */
+.particle-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---- Aurora Background ---- */
+.aurora {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  will-change: transform;
+}
+
+.aurora-1 {
+  width: 45vmax;
+  height: 45vmax;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  opacity: 0.07;
+  top: -18%;
+  left: -8%;
+  animation: drift1 28s ease-in-out infinite alternate;
+}
+
+.aurora-2 {
+  width: 38vmax;
+  height: 38vmax;
+  background: radial-gradient(circle, var(--accent-secondary) 0%, transparent 70%);
+  opacity: 0.05;
+  bottom: -12%;
+  right: -8%;
+  animation: drift2 32s ease-in-out infinite alternate;
+}
+
+.aurora-3 {
+  width: 25vmax;
+  height: 25vmax;
+  background: radial-gradient(circle, var(--accent-tertiary) 0%, transparent 70%);
+  opacity: 0.04;
+  top: 35%;
+  right: 15%;
+  animation: drift3 22s ease-in-out infinite alternate;
+}
+
+@keyframes drift1 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(8vw, 12vh) scale(1.15); }
+}
+@keyframes drift2 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-10vw, -8vh) scale(1.1); }
+}
+@keyframes drift3 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(6vw, -10vh) scale(1.2); }
+}
+
+/* ---- Subtle noise texture ---- */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.018;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+/* ---- Grid Background (subtle, for hero) ---- */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(234, 234, 242, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(234, 234, 242, 0.03) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(70% 60% at 50% 30%, #000 20%, transparent 100%);
+  -webkit-mask-image: radial-gradient(70% 60% at 50% 30%, #000 20%, transparent 100%);
+}
+
+/* ---- Global Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.08) transparent;
+}
+
+/* ---- Global Animations ---- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes morph {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  25%      { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  50%      { border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%; }
+  75%      { border-radius: 60% 40% 60% 30% / 60% 30% 40% 70%; }
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
+}
+
+@keyframes dashFlow {
+  to { stroke-dashoffset: -200px; }
+}
+
+/* ---- Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* ---- Main Content Container ---- */
+.main-content {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ---- Floating Chat Trigger Button ---- */
+.chat-fab {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 90;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--text-inverse);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  box-shadow:
+    0 0 0 1px rgba(0, 212, 170, 0.25),
+    0 8px 32px rgba(0, 212, 170, 0.3);
+  transition: transform 0.3s var(--ease-spring), box-shadow 0.3s ease;
+}
+
+.chat-fab:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 0 0 1px rgba(0, 212, 170, 0.4),
+    0 12px 40px rgba(0, 212, 170, 0.4);
+}
+
+.chat-fab:active {
+  transform: scale(0.95);
+}
+
+.chat-fab svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ---- Print ---- */
+@media print {
+  .aurora, .particle-canvas, .noise-overlay, .chat-fab {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+}
