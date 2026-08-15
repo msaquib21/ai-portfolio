@@ -1,140 +1,133 @@
 .aboutSection {
-  padding: 6rem 5%;
-  max-width: 1280px;
+  padding: 6rem 2rem;
+  max-width: 1200px;
   margin: 0 auto;
   color: var(--text-primary);
-  font-family: var(--font-body);
 }
 
-.header {
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
   margin-bottom: 4rem;
 }
 
-.label {
+.headerIndex {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 1.5rem;
   color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  margin-bottom: 1rem;
-  display: block;
+  font-weight: 500;
 }
 
-.title {
-  font-family: var(--font-display);
+.headerTitle {
+  font-family: var(--font-heading);
   font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0 0 1rem 0;
-  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.subtitle {
-  color: var(--text-secondary);
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-.divider {
+.headerDivider {
+  flex: 1;
   height: 2px;
-  width: 100%;
   background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
   opacity: 0.5;
 }
 
 .content {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 3rem;
+  perspective: 1000px;
+}
+
+/* Bio Card */
+.bioCard {
+  background-color: var(--bg-layer-3);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-depth-2);
+  /* Embossed surface look */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+}
+
+.bioText {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.bioText:last-child {
+  margin-bottom: 0;
+}
+
+/* Info Cards Grid */
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  perspective: 1200px;
+}
+
+.infoCard {
+  background-color: var(--bg-layer-2);
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: var(--shadow-depth-1);
+  border: 1px solid var(--border-light);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+.infoCard:hover {
+  box-shadow: var(--shadow-glow-soft);
+  border-color: var(--accent);
+}
+
+.infoLabel {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.infoValue {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Reveal Animation */
+.tiltIn {
+  opacity: 0;
+  transform: rotateX(6deg) translateY(20px);
+}
+
+.tiltIn.visible {
+  opacity: 1;
+  transform: rotateX(0deg) translateY(0);
 }
 
 @media (max-width: 900px) {
   .content {
     grid-template-columns: 1fr;
   }
-}
-
-.bioCard {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(18px) saturate(140%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 16px;
-  padding: 2.5rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  font-size: 1rem;
-}
-
-.bioCard p {
-  margin: 0 0 1.5rem 0;
-}
-
-.bioCard p:last-child {
-  margin-bottom: 0;
-}
-
-.infoCards {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.infoCard {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(18px) saturate(140%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 12px;
-  padding: 1.25rem;
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  transition: transform .35s cubic-bezier(.22,1,.36,1), border-color .35s, box-shadow .35s;
-}
-
-.infoCard:hover {
-  border-color: rgba(0, 212, 170, 0.25);
-  transform: translateY(-4px);
-  box-shadow: 0 24px 60px -30px rgba(0, 212, 170, 0.3);
-}
-
-.iconWrapper {
-  width: 48px;
-  height: 48px;
-  flex-shrink: 0;
-  border-radius: 10px;
-  background: rgba(0, 212, 170, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent);
-}
-
-.infoContent {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.infoLabel {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.infoValue {
-  font-size: 0.875rem;
-  color: var(--text-primary);
-  font-weight: 500;
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.visible {
-  opacity: 1;
-  transform: translateY(0);
+  
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
 }

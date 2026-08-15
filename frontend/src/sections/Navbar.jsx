@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
 
-const navSections = [
+const NAV_SECTIONS = [
   { id: 'about', label: 'About' },
   { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
@@ -11,15 +11,18 @@ const navSections = [
 ];
 
 const Navbar = ({ onOpenChat }) => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -33,135 +36,105 @@ const Navbar = ({ onOpenChat }) => {
           }
         });
       },
-      { threshold: 0.5 }
+      { rootMargin: '-50% 0px -50% 0px' }
     );
 
-    navSections.forEach(({ id }) => {
-      const element = document.getElementById(id);
+    NAV_SECTIONS.forEach((section) => {
+      const element = document.getElementById(section.id);
       if (element) observer.observe(element);
     });
 
     return () => observer.disconnect();
   }, []);
 
-  const scrollToSection = (id) => {
+  const handleNavClick = (e, id) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      window.scrollTo({
+        top: element.offsetTop - 80,
+        behavior: 'smooth',
+      });
     }
-    setIsMobileMenuOpen(false);
   };
 
   return (
-    <>
-      <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
-        <div className={styles.container}>
-          {/* Left: Logo */}
-          <div className={styles.logoArea}>
-            <div className={styles.logoIcon}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-            </div>
-            <span className={styles.logoText}>
-              saquib<span className={styles.logoDev}>.dev</span>
-            </span>
+    <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
+      <div className={styles.navContainer}>
+        <div className={styles.logoContainer}>
+          <div className={styles.logoCube}>
+            <div className={styles.cubeFace}></div>
+            <div className={styles.cubeFace}></div>
+            <div className={styles.cubeFace}></div>
+            <div className={styles.cubeFace}></div>
           </div>
+          <span className={styles.logoText}>
+            saquib<span className={styles.logoAccent}>.dev</span>
+          </span>
+        </div>
 
-          {/* Center: Desktop Nav Links */}
-          <div className={styles.desktopNav}>
-            {navSections.map(({ id, label }) => (
-              <button
-                key={id}
-                onClick={() => scrollToSection(id)}
-                className={`${styles.navLink} ${activeSection === id ? styles.active : ''}`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-
-          {/* Right: Actions */}
-          <div className={styles.actions}>
-            <a href="/Mohammad_Saquib_Resume.pdf" download="Mohammad_Saquib_Resume.pdf" className={styles.resumeBtn} aria-label="Download Resume">
-              <span>Resume</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
-              </svg>
+        <nav className={styles.desktopNav}>
+          {NAV_SECTIONS.map((section) => (
+            <a
+              key={section.id}
+              href={`#${section.id}`}
+              onClick={(e) => handleNavClick(e, section.id)}
+              className={`${styles.navLink} ${
+                activeSection === section.id ? styles.active : ''
+              }`}
+            >
+              {section.label}
             </a>
-            
-            <button 
-              className={styles.hamburger} 
-              onClick={() => setIsMobileMenuOpen(true)}
-              aria-label="Open Mobile Menu"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </nav>
-
-      {/* Mobile Menu Overlay */}
-      <div className={`${styles.mobileOverlay} ${isMobileMenuOpen ? styles.mobileOverlayOpen : ''}`}>
-        <div className={styles.mobileHeader}>
-          <div className={styles.logoArea}>
-            <div className={styles.logoIcon}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-            </div>
-            <span className={styles.logoText}>
-              saquib<span className={styles.logoDev}>.dev</span>
-            </span>
-          </div>
-          <button 
-            className={styles.closeBtn} 
-            onClick={() => setIsMobileMenuOpen(false)}
-            aria-label="Close Mobile Menu"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </button>
-        </div>
-
-        <div className={styles.mobileNavLinks}>
-          {navSections.map(({ id, label }) => (
-            <button
-              key={id}
-              onClick={() => scrollToSection(id)}
-              className={styles.mobileNavLink}
-            >
-              {label}
-            </button>
           ))}
-        </div>
+        </nav>
 
-        <div className={styles.mobileActions}>
-          <button 
-            className={styles.askAiBtn}
-            onClick={() => {
-              setIsMobileMenuOpen(false);
-              onOpenChat();
-            }}
+        <div className={styles.rightActions}>
+          <a 
+            href="/Mohammad_Saquib_Resume.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={styles.resumeBtn}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            Resume
+          </a>
+          <button className={styles.chatBtn} onClick={onOpenChat} aria-label="Open AI Chat">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
             </svg>
-            Ask My AI
+          </button>
+          <button 
+            className={`${styles.hamburger} ${mobileMenuOpen ? styles.hamburgerOpen : ''}`} 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
       </div>
-    </>
+
+      {mobileMenuOpen && (
+        <div className={styles.mobileOverlay}>
+          <nav className={styles.mobileNav}>
+            {NAV_SECTIONS.map((section, index) => (
+              <a
+                key={section.id}
+                href={`#${section.id}`}
+                onClick={(e) => handleNavClick(e, section.id)}
+                className={`${styles.mobileNavLink} ${
+                  activeSection === section.id ? styles.activeMobile : ''
+                }`}
+                style={{ transform: `translateX(${index * 5}px)`, transitionDelay: `${index * 0.05}s` }}
+              >
+                {section.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+      )}
+    </header>
   );
 };
 

@@ -1,332 +1,310 @@
-/* ============================================================
-   GLOBAL DESIGN SYSTEM — Mohammad Saquib AI Portfolio
-   "Nebula" Theme — Premium dark with neon cyan accent
-   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap');
 
-/* ---- Design Tokens ---- */
 :root {
-  --bg-void: #06060f;
-  --bg-surface: rgba(255, 255, 255, 0.025);
-  --bg-surface-elevated: rgba(255, 255, 255, 0.045);
-  --bg-surface-hover: rgba(255, 255, 255, 0.06);
+  --bg-deep: #08080f;
+  --bg-layer-1: #0d0d18;
+  --bg-layer-2: #12121f;
+  --bg-layer-3: #181828;
+  --bg-elevated: #1e1e32;
 
-  --border-subtle: rgba(255, 255, 255, 0.06);
-  --border-medium: rgba(255, 255, 255, 0.1);
-  --border-glow: rgba(0, 212, 170, 0.25);
+  --border-dim: rgba(255, 255, 255, 0.04);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.12);
 
-  --text-primary: #eaeaf2;
-  --text-secondary: #9ca3af;
-  --text-muted: #4b5563;
-  --text-inverse: #06060f;
+  --text-primary: #f0f0f8;
+  --text-secondary: #a0a0b8;
+  --text-muted: #5a5a72;
+  --text-inverse: #08080f;
 
-  --accent: #00d4aa;
-  --accent-bright: #00f5c4;
-  --accent-dim: rgba(0, 212, 170, 0.12);
-  --accent-secondary: #6366f1;
-  --accent-tertiary: #14b8a6;
+  --accent: #00e5bf;
+  --accent-glow: rgba(0, 229, 191, 0.15);
+  --accent-secondary: #7c5cfc;
+  --accent-warm: #ff6b4a;
 
-  --user-bubble-from: #131330;
-  --user-bubble-to: #182040;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-display: 'Space Grotesk', sans-serif;
 
-  --radius-xl: 24px;
-  --radius-lg: 18px;
-  --radius-md: 12px;
+  --perspective: 1200px;
   --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
 
-  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
-  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --shadow-depth-1: 0 4px 12px rgba(0,0,0,0.3), 0 1px 3px rgba(0,0,0,0.2);
+  --shadow-depth-2: 0 12px 40px rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.3);
+  --shadow-depth-3: 0 24px 80px rgba(0,0,0,0.5), 0 8px 24px rgba(0,0,0,0.3);
+  --shadow-glow: 0 0 40px rgba(0, 229, 191, 0.12), 0 0 80px rgba(0, 229, 191, 0.06);
+  --shadow-glow-strong: 0 0 60px rgba(0, 229, 191, 0.2), 0 0 120px rgba(0, 229, 191, 0.08);
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-
-  --shadow-glow: 0 0 0 1px rgba(0, 212, 170, 0.25), 0 22px 60px -22px rgba(0, 212, 170, 0.45);
 }
 
-/* ---- Reset & Base ---- */
+/* 1. Reset & Base */
 *, *::before, *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {
   scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
-}
-
-html, body, #root {
-  min-height: 100vh;
 }
 
 body {
-  font-family: var(--font-body);
-  background: var(--bg-void);
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-deep);
   color: var(--text-primary);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
-  letter-spacing: -0.01em;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-display);
-  letter-spacing: -0.025em;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-ul, ol {
-  list-style: none;
-}
-
-img, svg, video, canvas {
-  display: block;
-  max-width: 100%;
-}
-
-button, input, select, textarea {
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: none;
-  outline: none;
-}
-
-::selection {
-  background: var(--accent-dim);
-  color: var(--accent-bright);
-}
-
-/* ---- Particle Canvas ---- */
-.particle-canvas {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* ---- Aurora Background ---- */
-.aurora {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
+/* 2. 3D Scene Container */
+.scene {
+  perspective: var(--perspective);
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
   overflow: hidden;
 }
 
-.aurora-blob {
+/* 3. Depth Layers & Floating 3D Shapes */
+.depth-bg {
+  position: fixed;
+  inset: -100px;
+  z-index: 0;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+
+.shape-3d {
   position: absolute;
+  filter: blur(8px);
+  opacity: 0.15;
+  transform-style: preserve-3d;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, var(--accent), transparent);
+  border-radius: 20%;
+  top: 10%;
+  left: 15%;
+  animation: float3d 25s infinite alternate ease-in-out;
+}
+
+.shape-2 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, var(--accent-secondary), transparent);
+  border-radius: 40%;
+  top: 40%;
+  right: 5%;
+  animation: float3d 30s infinite alternate-reverse ease-in-out, drift 20s infinite alternate linear;
+}
+
+.shape-3 {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(135deg, var(--accent-warm), transparent);
   border-radius: 50%;
-  filter: blur(90px);
-  will-change: transform;
+  bottom: -5%;
+  left: 30%;
+  animation: spin-slow 40s infinite linear;
 }
 
-.aurora-1 {
-  width: 45vmax;
-  height: 45vmax;
-  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
-  opacity: 0.07;
-  top: -18%;
-  left: -8%;
-  animation: drift1 28s ease-in-out infinite alternate;
+/* 4. Ambient Light */
+.ambient-light {
+  position: fixed; 
+  inset: 0; 
+  z-index: 1; 
+  pointer-events: none;
+  background: radial-gradient(ellipse 80% 50% at 30% -10%, rgba(0, 229, 191, 0.06), transparent 70%),
+              radial-gradient(ellipse 60% 40% at 80% 20%, rgba(124, 92, 252, 0.04), transparent 60%);
 }
 
-.aurora-2 {
-  width: 38vmax;
-  height: 38vmax;
-  background: radial-gradient(circle, var(--accent-secondary) 0%, transparent 70%);
-  opacity: 0.05;
-  bottom: -12%;
-  right: -8%;
-  animation: drift2 32s ease-in-out infinite alternate;
-}
-
-.aurora-3 {
-  width: 25vmax;
-  height: 25vmax;
-  background: radial-gradient(circle, var(--accent-tertiary) 0%, transparent 70%);
-  opacity: 0.04;
-  top: 35%;
-  right: 15%;
-  animation: drift3 22s ease-in-out infinite alternate;
-}
-
-@keyframes drift1 {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(8vw, 12vh) scale(1.15); }
-}
-@keyframes drift2 {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(-10vw, -8vh) scale(1.1); }
-}
-@keyframes drift3 {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(6vw, -10vh) scale(1.2); }
-}
-
-/* ---- Subtle noise texture ---- */
+/* 6. Noise texture overlay */
 .noise-overlay {
   position: fixed;
   inset: 0;
   z-index: 2;
   pointer-events: none;
-  opacity: 0.018;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 200px 200px;
+  opacity: 0.012;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-/* ---- Grid Background (subtle, for hero) ---- */
-.grid-bg {
-  background-image:
-    linear-gradient(to right, rgba(234, 234, 242, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(234, 234, 242, 0.03) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(70% 60% at 50% 30%, #000 20%, transparent 100%);
-  -webkit-mask-image: radial-gradient(70% 60% at 50% 30%, #000 20%, transparent 100%);
-}
-
-/* ---- Global Scrollbar ---- */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.14);
-}
-
-/* Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.08) transparent;
-}
-
-/* ---- Global Animations ---- */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fadeSlideUp {
-  from { opacity: 0; transform: translateY(18px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes rise {
-  from { opacity: 0; transform: translateY(18px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes morph {
-  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-  25%      { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-  50%      { border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%; }
-  75%      { border-radius: 60% 40% 60% 30% / 60% 30% 40% 70%; }
-}
-
-@keyframes cursorBlink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-@keyframes floatSlow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-}
-
-@keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-@keyframes breathe {
-  0%, 100% { transform: scale(1); opacity: 0.6; }
-  50% { transform: scale(1.15); opacity: 1; }
-}
-
-@keyframes statusPulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(0.85); }
-}
-
-@keyframes dashFlow {
-  to { stroke-dashoffset: -200px; }
-}
-
-/* ---- Reduced Motion ---- */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    transition-duration: 0.001ms !important;
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-  }
-}
-
-/* ---- Main Content Container ---- */
+/* 7. Main content container */
 .main-content {
   position: relative;
   z-index: 10;
-  min-height: 100vh;
-  overflow-x: hidden;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-/* ---- Floating Chat Trigger Button ---- */
+/* 5. Card System */
+.card-3d {
+  background-color: var(--bg-layer-3);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-depth-1);
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out), border-color 0.4s var(--ease-out);
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.card-3d::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  opacity: 0.5;
+  transition: opacity 0.4s var(--ease-out);
+}
+
+.card-3d:hover {
+  transform: translateY(-6px) rotateX(2deg);
+  box-shadow: var(--shadow-depth-2);
+  border-color: var(--border-medium);
+}
+
+.card-3d:hover::before {
+  opacity: 1;
+}
+
+/* 8. Chat FAB Button */
 .chat-fab {
   position: fixed;
-  bottom: 28px;
-  right: 28px;
-  z-index: 90;
-  width: 56px;
-  height: 56px;
+  bottom: 2rem;
+  right: 2rem;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  background: var(--accent);
+  background-color: var(--accent);
   color: var(--text-inverse);
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  font-size: 24px;
   border: none;
-  box-shadow:
-    0 0 0 1px rgba(0, 212, 170, 0.25),
-    0 8px 32px rgba(0, 212, 170, 0.3);
-  transition: transform 0.3s var(--ease-spring), box-shadow 0.3s ease;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: var(--shadow-glow);
+  transition: transform 0.3s var(--ease-spring), box-shadow 0.3s var(--ease-out);
 }
 
 .chat-fab:hover {
-  transform: scale(1.1);
-  box-shadow:
-    0 0 0 1px rgba(0, 212, 170, 0.4),
-    0 12px 40px rgba(0, 212, 170, 0.4);
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: var(--shadow-glow-strong);
 }
 
-.chat-fab:active {
-  transform: scale(0.95);
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  margin-top: 0;
 }
 
-.chat-fab svg {
-  width: 24px;
-  height: 24px;
+p {
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
-/* ---- Print ---- */
+/* 9. Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* 10. Global Keyframes */
+@keyframes float3d {
+  0% { transform: translateY(0) rotateX(0) rotateY(0) rotateZ(0); }
+  50% { transform: translateY(-40px) rotateX(15deg) rotateY(-15deg) rotateZ(10deg); }
+  100% { transform: translateY(20px) rotateX(-10deg) rotateY(20deg) rotateZ(-5deg); }
+}
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes drift {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -20px) scale(1.1); }
+  100% { transform: translate(-20px, 30px) scale(0.95); }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: var(--shadow-glow); }
+  50% { box-shadow: var(--shadow-glow-strong); }
+  100% { box-shadow: var(--shadow-glow); }
+}
+
+@keyframes tilt-in {
+  from { transform: rotateX(8deg) translateY(30px); opacity: 0; }
+  to { transform: rotateX(0deg) translateY(0); opacity: 1; }
+}
+
+.animate-fade-up {
+  animation: fadeSlideUp 0.8s var(--ease-out) forwards;
+}
+
+.animate-tilt-in {
+  animation: tilt-in 1s var(--ease-out) forwards;
+}
+
+/* 11. Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 12. Print styles */
 @media print {
-  .aurora, .particle-canvas, .noise-overlay, .chat-fab {
+  body {
+    background-color: white;
+    color: black;
+  }
+  .depth-bg, .ambient-light, .noise-overlay, .chat-fab {
     display: none !important;
   }
-  body {
-    background: white;
-    color: black;
+  .card-3d {
+    background-color: white;
+    box-shadow: none;
+    border: 1px solid #ccc;
   }
 }

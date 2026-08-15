@@ -1,132 +1,240 @@
-.section {
-  padding: 6rem 1.5rem;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.visible {
-  opacity: 1;
-  transform: translateY(0);
+.educationSection {
+  padding: 8rem 2rem;
+  background-color: var(--bg-deep, #08080f);
+  color: var(--text-primary, #ffffff);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
   max-width: 1000px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .header {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .sectionNumber {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  color: var(--accent);
   display: block;
-  margin-bottom: 0.5rem;
+  font-family: var(--font-mono, monospace);
+  color: var(--accent, #00e5bf);
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
 }
 
 .title {
-  font-family: var(--font-display);
-  font-size: 2.5rem;
+  font-family: var(--font-display, sans-serif);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  margin: 0;
 }
 
-.subtitle {
-  color: var(--text-secondary);
-  font-size: 1.125rem;
-}
-
-.timeline {
+.grid {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 3rem;
 }
 
-.card {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+.eduCard {
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px) rotateX(15deg);
+  transform-origin: center bottom;
+  transition: opacity 0.8s var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)),
+              transform 0.8s var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1));
+  transition-delay: var(--delay, 0s);
+  perspective: 1000px;
+}
+
+.eduCard.visible {
+  opacity: 1;
+  transform: translateY(0) rotateX(0deg);
+}
+
+.eduCard::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: -10px;
+  bottom: -10px;
+  background-color: var(--bg-layer-1, #131320);
+  border-radius: var(--radius-lg, 1rem);
+  z-index: 0;
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.05));
+  transition: transform 0.3s ease;
+}
+
+.eduCard::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: -20px;
+  bottom: -20px;
+  background-color: var(--bg-deep, #08080f);
+  border-radius: var(--radius-lg, 1rem);
+  z-index: -1;
+  border: 1px solid var(--border-dim, rgba(255, 255, 255, 0.02));
+  transition: transform 0.3s ease;
+  box-shadow: var(--shadow-depth-1, 0 10px 30px rgba(0, 0, 0, 0.5));
+}
+
+.eduCard:hover::before {
+  transform: translate(4px, 4px);
+}
+
+.eduCard:hover::after {
+  transform: translate(8px, 8px);
+}
+
+.cardInner {
+  position: relative;
+  z-index: 1;
+  background-color: var(--bg-elevated, #1e1e32);
+  border: 1px solid var(--border-medium, rgba(255, 255, 255, 0.1));
+  border-radius: var(--radius-lg, 1rem);
+  padding: 2.5rem;
+  display: flex;
+  gap: 2rem;
   align-items: center;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow-depth-2, 0 20px 40px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s var(--ease-spring, cubic-bezier(0.175, 0.885, 0.32, 1.275));
 }
 
-.card:hover {
-  background: var(--bg-surface-elevated);
-  transform: translateY(-2px);
-  border-color: rgba(0, 212, 170, 0.3);
+.eduCard:hover .cardInner {
+  transform: translate(-4px, -4px);
 }
 
 .iconArea {
-  width: 48px;
-  height: 48px;
-  background: rgba(0, 212, 170, 0.1);
-  border-radius: 8px;
+  width: 4rem;
+  height: 4rem;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+  border: 1px solid var(--border-medium, rgba(255, 255, 255, 0.1));
+  border-radius: var(--radius-md, 0.5rem);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent);
+  box-shadow: inset 0 0 20px rgba(0, 229, 191, 0.1),
+              0 8px 16px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.iconArea::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(0, 229, 191, 0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.eduCard:hover .iconArea::before {
+  opacity: 1;
+}
+
+.iconSvg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--accent, #00e5bf);
+  z-index: 1;
 }
 
 .contentArea {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 
-.school {
-  font-family: var(--font-display);
-  font-size: 1.125rem;
+.institution {
+  font-family: var(--font-display, sans-serif);
+  font-size: 1.5rem;
   font-weight: 600;
-  color: var(--text-primary);
   margin: 0;
+  color: var(--text-primary, #ffffff);
 }
 
-.detail {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  margin: 0;
-}
-
-.scoreArea {
+.detailsRow {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.25rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.degree {
+  font-size: 1.1rem;
+  color: var(--text-secondary, #a0a0b0);
 }
 
 .period {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  color: var(--text-muted);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.9rem;
+  color: var(--text-muted, #707080);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.05));
 }
 
 .score {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  color: var(--accent);
-  font-weight: 500;
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: var(--accent, #00e5bf);
+  font-family: var(--font-mono, monospace);
+  align-self: flex-start;
+  position: relative;
+}
+
+.score::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--accent, #00e5bf);
+  opacity: 0.3;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.eduCard:hover .score::after {
+  transform: scaleX(1);
 }
 
 @media (max-width: 768px) {
-  .card {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
-  .iconArea {
-    margin-bottom: 0.5rem;
-  }
-  
-  .scoreArea {
+  .cardInner {
+    flex-direction: column;
     align-items: flex-start;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  
+  .detailsRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .eduCard::before {
+    top: 6px; left: 6px; right: -6px; bottom: -6px;
+  }
+  
+  .eduCard::after {
+    top: 12px; left: 12px; right: -12px; bottom: -12px;
   }
 }
