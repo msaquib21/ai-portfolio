@@ -202,7 +202,7 @@ def chat(request: chatrequest):
         return {"answer": "System Error: Please visit /update-resume first to generate the candidate profile."}
         
     # Read the JSON file instantly
-    with open(BASE_DIR / "candidate_profile.json", "r") as f:
+    with open(BASE_DIR / "candidate_profile.json", "r", encoding="utf-8", errors="replace") as f:
         resume_dict = json.load(f)
         
     resume = Resume(**resume_dict)
@@ -255,7 +255,7 @@ def chat_stream(request: chatrequest):
                 yield "data: [DONE]\n\n"
             return StreamingResponse(missing_gen(), media_type="text/event-stream")
 
-        with open(profile_path, "r") as f:
+        with open(profile_path, "r", encoding="utf-8", errors="replace") as f:
             resume_dict = json.load(f)
 
         resume = Resume(**resume_dict)

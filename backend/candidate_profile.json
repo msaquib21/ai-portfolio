@@ -1,89 +1,89 @@
-{
-  "name": "MOHAMMAD SAQUIB",
-  "email": "m.saquib419@gmail.com",
-  "phone": "+91-9238612129",
-  "total_experience_years": null,
-  "skills": [
-    "Python",
-    "SQL",
-    "C++",
-    "LangChain",
-    "LangGraph",
-    "RAG Systems",
-    "Text-to-SQL",
-    "Vector Databases (ChromaDB, Pinecone)",
-    "Prompt Engineering",
-    "Azure OpenAI",
-    "Ollama",
-    "Hugging Face Transformers",
-    "FastAPI",
-    "Pydantic",
-    "Azure Databricks",
-    "SQL Warehouse",
-    "Databricks Apps",
-    "DLT",
-    "ETL/ELT Pipelines",
-    "DuckDB",
-    "MySQL",
-    "PostgreSQL",
-    "Power BI",
-    "DAX",
-    "Azure (Data Lake, Databricks)",
-    "Docker",
-    "Git/GitHub",
-    "REST APIs",
-    "WSO2 IAM",
-    "Postman",
-    "Figma"
-  ],
-  "experiences": [
-    {
-      "company": "Reliance Industries Limited",
-      "role": "Data and Application Engineer",
-      "duration": "August 2024 – Present",
-      "description": [
-        "Built a RAG-powered technical documentation search engine over 200+ pages of MES/WMS specs using LangChain, ChromaDB, and Azure OpenAI (GPT-4o); achieved 90% retrieval accuracy at sub-7-second latency, cutting spec lookup time from 30+ min to <5 min and eliminating duplicate cross-team technical queries.",
-        "Shipped a Text-to-SQL natural language query engine over Databricks SQL Warehouse using LangChain SQLDatabaseToolkit and ReAct agent loops; achieved 91% query accuracy via few-shot prompting, enabling 500+ operators to self-serve KPIs and cutting ad-hoc BI reporting tickets by 60%.",
-        "Engineered an ASN (Advanced Shipping Notice) Attachment App on Databricks Apps (Azure Databricks) and automated API-based extraction/ingestion data pipelines with supplier portals, eliminating manual data entry across supply chain workflows.",
-        "Secured REST API data flow integrity across 4+ cross-functional teams via WSO2 IAM, enforcing strict Role-Based Access Control for 500+ active shop-floor users."
-      ],
-      "skills_used": [
-        "LangChain",
-        "ChromaDB",
-        "Azure OpenAI",
-        "GPT-4o",
-        "Text-to-SQL",
-        "Databricks SQL Warehouse",
-        "SQLDatabaseToolkit",
-        "ReAct",
-        "Databricks Apps",
-        "Azure Databricks",
-        "REST APIs",
-        "WSO2 IAM",
-        "Role-Based Access Control"
-      ]
-    },
-    {
-      "company": "Indian Institute of Technology, Hyderabad",
-      "role": "Research Summer Intern",
-      "duration": "May 2023 – July 2023",
-      "description": [
-        "Implemented a RISC-V ISA simulator emulating core instruction set architecture behavior in C++, demonstrating low-level systems execution, memory alignment, and computer architecture principles."
-      ],
-      "skills_used": [
-        "C++",
-        "RISC-V ISA"
-      ]
-    }
-  ],
-  "education": [
-    "National Institute of Technology Raipur, India – B.Tech in Computer Science & Engineering | CPI: 7.65 (2020 – 2024)",
-    "Delhi Public School, Kuwait – Class XII (CBSE): 90.2% (2019 – 2020)",
-    "Delhi Public School, Kuwait – Class X (CBSE): 85.6% (2017 – 2018)"
-  ],
-  "projects": [
-    "Agentic Resume Analyzer | Python, LangGraph, LangChain, FastAPI, ChromaDB, Pydantic",
-    "Chess Analytics ETL Pipeline | Python, DLT, DuckDB, MySQL, Power BI, DAX"
-  ],
-  "certifications": []
+{
+  "name": "MOHAMMAD SAQUIB",
+  "email": "m.saquib419@gmail.com",
+  "phone": "+91-9238612129",
+  "total_experience_years": null,
+  "skills": [
+    "Python",
+    "SQL",
+    "C++",
+    "LangChain",
+    "LangGraph",
+    "RAG Systems",
+    "Text-to-SQL",
+    "Vector Databases (ChromaDB, Pinecone)",
+    "Prompt Engineering",
+    "Azure OpenAI",
+    "Ollama",
+    "Hugging Face Transformers",
+    "FastAPI",
+    "Pydantic",
+    "Azure Databricks",
+    "SQL Warehouse",
+    "Databricks Apps",
+    "DLT",
+    "ETL/ELT Pipelines",
+    "DuckDB",
+    "MySQL",
+    "PostgreSQL",
+    "Power BI",
+    "DAX",
+    "Azure (Data Lake, Databricks)",
+    "Docker",
+    "Git/GitHub",
+    "REST APIs",
+    "WSO2 IAM",
+    "Postman",
+    "Figma"
+  ],
+  "experiences": [
+    {
+      "company": "Reliance Industries Limited",
+      "role": "Data and Application Engineer",
+      "duration": "August 2024 - Present",
+      "description": [
+        "Built a RAG-powered technical documentation search engine over 200+ pages of MES/WMS specs using LangChain, ChromaDB, and Azure OpenAI (GPT-4o); achieved 90% retrieval accuracy at sub-7-second latency, cutting spec lookup time from 30+ min to <5 min and eliminating duplicate cross-team technical queries.",
+        "Shipped a Text-to-SQL natural language query engine over Databricks SQL Warehouse using LangChain SQLDatabaseToolkit and ReAct agent loops; achieved 91% query accuracy via few-shot prompting, enabling 500+ operators to self-serve KPIs and cutting ad-hoc BI reporting tickets by 60%.",
+        "Engineered an ASN (Advanced Shipping Notice) Attachment App on Databricks Apps (Azure Databricks) and automated API-based extraction/ingestion data pipelines with supplier portals, eliminating manual data entry across supply chain workflows.",
+        "Secured REST API data flow integrity across 4+ cross-functional teams via WSO2 IAM, enforcing strict Role-Based Access Control for 500+ active shop-floor users."
+      ],
+      "skills_used": [
+        "LangChain",
+        "ChromaDB",
+        "Azure OpenAI",
+        "GPT-4o",
+        "Text-to-SQL",
+        "Databricks SQL Warehouse",
+        "SQLDatabaseToolkit",
+        "ReAct",
+        "Databricks Apps",
+        "Azure Databricks",
+        "REST APIs",
+        "WSO2 IAM",
+        "Role-Based Access Control"
+      ]
+    },
+    {
+      "company": "Indian Institute of Technology, Hyderabad",
+      "role": "Research Summer Intern",
+      "duration": "May 2023 - July 2023",
+      "description": [
+        "Implemented a RISC-V ISA simulator emulating core instruction set architecture behavior in C++, demonstrating low-level systems execution, memory alignment, and computer architecture principles."
+      ],
+      "skills_used": [
+        "C++",
+        "RISC-V ISA"
+      ]
+    }
+  ],
+  "education": [
+    "National Institute of Technology Raipur, India - B.Tech in Computer Science & Engineering | CPI: 7.65 (2020 - 2024)",
+    "Delhi Public School, Kuwait - Class XII (CBSE): 90.2% (2019 - 2020)",
+    "Delhi Public School, Kuwait - Class X (CBSE): 85.6% (2017 - 2018)"
+  ],
+  "projects": [
+    "Agentic Resume Analyzer | Python, LangGraph, LangChain, FastAPI, ChromaDB, Pydantic",
+    "Chess Analytics ETL Pipeline | Python, DLT, DuckDB, MySQL, Power BI, DAX"
+  ],
+  "certifications": []
 }
