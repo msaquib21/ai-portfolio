@@ -38,6 +38,10 @@ const ChatPanel = ({ isOpen, onClose }) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question: text }),
       });
+      if (!res.ok) {
+        const errorText = await res.text();
+        throw new Error(`Server returned ${res.status}: ${errorText || res.statusText}`);
+      }
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
       let full = '';
@@ -59,8 +63,8 @@ const ChatPanel = ({ isOpen, onClose }) => {
         }
       }
       setMessages(prev => [...prev, { role: 'ai', content: full }]);
-    } catch {
-      setMessages(prev => [...prev, { role: 'ai', content: '⚠️ Connection error. Please ensure the backend is running on port 8000.' }]);
+    } catch (err) {
+      setMessages(prev => [...prev, { role: 'ai', content: `⚠️ Connection error: ${err.message || 'Unable to reach the backend service.'}` }]);
     } finally {
       setStreamingContent('');
       setIsStreaming(false);

@@ -247,18 +247,25 @@ def ask_candidate_stream(question: str, resume: Resume):
 
 @app.post("/chat/stream")
 def chat_stream(request: chatrequest):
-    if not os.path.exists(BASE_DIR / "candidate_profile.json"):
-        def error_gen():
-            yield f"data: {json.dumps({'token': 'System Error: Please visit /update-resume first to generate the candidate profile.'})}\n\n"
+    try:
+        profile_path = BASE_DIR / "candidate_profile.json"
+        if not os.path.exists(profile_path):
+            def missing_gen():
+                yield f"data: {json.dumps({'token': 'System Error: candidate_profile.json not found on server.'})}\n\n"
+                yield "data: [DONE]\n\n"
+            return StreamingResponse(missing_gen(), media_type="text/event-stream")
+
+        with open(profile_path, "r") as f:
+            resume_dict = json.load(f)
+
+        resume = Resume(**resume_dict)
+        return StreamingResponse(
+            ask_candidate_stream(request.question, resume),
+            media_type="text/event-stream",
+            headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"}
+        )
+    except Exception as e:
+        def err_gen():
+            yield f"data: {json.dumps({'token': f'Error: {str(e)}'})}\n\n"
             yield "data: [DONE]\n\n"
-        return StreamingResponse(error_gen(), media_type="text/event-stream")
-
-    with open(BASE_DIR / "candidate_profile.json", "r") as f:
-        resume_dict = json.load(f)
-
-    resume = Resume(**resume_dict)
-    return StreamingResponse(
-        ask_candidate_stream(request.question, resume),
-        media_type="text/event-stream",
-        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"}
-    )
+        return StreamingResponse(err_gen(), media_type="text/event-stream")
