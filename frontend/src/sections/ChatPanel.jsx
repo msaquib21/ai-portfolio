@@ -32,7 +32,8 @@ const ChatPanel = ({ isOpen, onClose }) => {
     setIsStreaming(true);
     setStreamingContent('');
     try {
-      const res = await fetch('http://127.0.0.1:8000/chat/stream', {
+      const baseUrl = (import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000').replace(/\/$/, '');
+      const res = await fetch(`${baseUrl}/chat/stream`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question: text }),

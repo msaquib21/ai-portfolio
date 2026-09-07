@@ -140,6 +140,16 @@
   }
 }
 
+.secondaryProject .projectDetails {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+  .secondaryProject .projectDetails {
+    grid-template-columns: 1fr;
+  }
+}
+
 .detailCard {
   background-color: var(--bg-layer-3, #181828);
   padding: 1.5rem;
@@ -237,4 +247,14 @@
 }
 .featuredProject.reveal.isVisible {
   transform: translateY(0) rotateX(2deg) rotateY(-3deg);
+}
+
+.secondaryProject .projectDetails {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+  .secondaryProject .projectDetails {
+    grid-template-columns: 1fr;
+  }
 }

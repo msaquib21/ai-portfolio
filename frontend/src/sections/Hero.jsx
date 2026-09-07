@@ -40,9 +40,89 @@ const Typewriter = ({ strings }) => {
   return <span className={styles.typewriter}>{currentText}<span className={styles.cursor}>|</span></span>;
 };
 
+const EXPERTISE_CARDS = [
+  {
+    icon: 'genai',
+    title: 'GenAI / LLMs',
+    color: 'var(--accent-secondary, #7c5cfc)',
+    items: ['LangChain / LangGraph', 'Azure OpenAI / GPT-4o', 'Prompt Engineering & ReAct']
+  },
+  {
+    icon: 'rag',
+    title: 'RAG Systems',
+    color: 'var(--accent, #00e5bf)',
+    items: ['Vector DBs (ChromaDB, Pinecone)', 'Semantic Search & Hybrid Retrieval', '90% accuracy at <7s latency']
+  },
+  {
+    icon: 'data',
+    title: 'Data Engineering',
+    color: 'var(--accent-warm, #ff6b4a)',
+    items: ['Azure Databricks / SQL Warehouse', 'ETL/ELT Pipelines (DLT)', 'DuckDB / MySQL / PostgreSQL']
+  },
+  {
+    icon: 'backend',
+    title: 'Backend & APIs',
+    color: 'var(--accent, #00e5bf)',
+    items: ['FastAPI + Pydantic', 'REST APIs & WSO2 IAM', 'Docker & Git/GitHub']
+  },
+  {
+    icon: 'analytics',
+    title: 'Analytics & Tooling',
+    color: 'var(--accent-secondary, #7c5cfc)',
+    items: ['Power BI & DAX Dashboards', 'Text-to-SQL Engines', 'Hugging Face Transformers']
+  }
+];
+
+const getIconSvg = (iconName, color) => {
+  switch (iconName) {
+    case 'genai':
+      return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+        </svg>
+      );
+    case 'rag':
+      return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line>
+        </svg>
+      );
+    case 'data':
+      return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+        </svg>
+      );
+    case 'backend':
+      return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
+        </svg>
+      );
+    case 'analytics':
+      return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+};
+
 const Hero = ({ onOpenChat }) => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [activeCard, setActiveCard] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const heroRef = useRef(null);
+
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(() => {
+      setActiveCard((prev) => (prev + 1) % EXPERTISE_CARDS.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [isPaused]);
 
   const handleMouseMove = (e) => {
     if (!heroRef.current) return;
@@ -99,49 +179,41 @@ const Hero = ({ onOpenChat }) => {
         </div>
 
         <div className={styles.contentRight}>
-          <div className={styles.cardScene} style={{
+          <div 
+            className={styles.cardScene} 
+            style={{
               transform: `rotateY(${mousePos.x * 20}deg) rotateX(${-mousePos.y * 20}deg)`
-            }}>
-            
-            <div className={`${styles.isoCard} ${styles.cardBack}`}>
-              <div className={styles.cardGlow}></div>
-              <div className={styles.cardHeader}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-secondary)" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
-                <h3>GenAI / LLM</h3>
+            }}
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            {EXPERTISE_CARDS.map((card, idx) => (
+              <div 
+                key={idx}
+                className={`${styles.isoCard} ${styles.slideCard} ${idx === activeCard ? styles.slideCardActive : ''}`}
+              >
+                <div className={styles.cardGlow}></div>
+                <div className={styles.cardHeader}>
+                  {getIconSvg(card.icon, card.color)}
+                  <h3 style={{ color: card.color }}>{card.title}</h3>
+                </div>
+                <ul className={styles.cardTech}>
+                  {card.items.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
               </div>
-              <ul className={styles.cardTech}>
-                <li>LangChain / LlamaIndex</li>
-                <li>OpenAI / Anthropic</li>
-                <li>Fine-tuning & LoRA</li>
-              </ul>
-            </div>
+            ))}
+          </div>
 
-            <div className={`${styles.isoCard} ${styles.cardMiddle}`}>
-              <div className={styles.cardGlow}></div>
-              <div className={styles.cardHeader}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-warm)" strokeWidth="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
-                <h3>Data Engineering</h3>
-              </div>
-              <ul className={styles.cardTech}>
-                <li>Python & SQL</li>
-                <li>Spark / Databricks</li>
-                <li>Airflow & ETL</li>
-              </ul>
-            </div>
-
-            <div className={`${styles.isoCard} ${styles.cardFront}`}>
-              <div className={styles.cardGlow}></div>
-              <div className={styles.cardHeader}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                <h3>RAG Systems</h3>
-              </div>
-              <ul className={styles.cardTech}>
-                <li>Vector DBs (Milvus, Pinecone)</li>
-                <li>Semantic Search</li>
-                <li>Hybrid Retrieval</li>
-              </ul>
-            </div>
-
+          <div className={styles.dotNav}>
+            {EXPERTISE_CARDS.map((_, idx) => (
+              <div 
+                key={idx}
+                className={`${styles.dot} ${idx === activeCard ? styles.dotActive : ''}`}
+                onClick={() => setActiveCard(idx)}
+              />
+            ))}
           </div>
         </div>
       </div>

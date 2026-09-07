@@ -4,6 +4,9 @@ import os
 import time
 import json
 from pathlib import Path
+
+# Resolve the directory this file lives in so relative paths always work
+BASE_DIR = Path(__file__).resolve().parent
 from dotenv import load_dotenv
 from groq import Groq
 from pydantic import BaseModel
@@ -21,7 +24,7 @@ if not my_api_key:
 client = Groq(api_key=my_api_key)
 
 # Specify which AI model we want to use and set the default sender role to 'user'
-model = "llama-3.3-70b-versatile"
+model = "openai/gpt-oss-120b"
 role = "user"
 
 app = FastAPI()
@@ -173,11 +176,11 @@ def home():
 # --- NEW: A secret endpoint just for you to update your resume! ---
 @app.get("/update-resume")
 def update_resume_data():
-    resume_text = read_pdf(Path("Mohammad_Saquib_Resume.pdf"))
+    resume_text = read_pdf(BASE_DIR / "Mohammad_Saquib_Resume.pdf")
     parsed_data = parse_resume(resume_text)
     
     # Save the AI's extraction to a physical JSON file
-    with open("candidate_profile.json", "w") as f:
+    with open(BASE_DIR / "candidate_profile.json", "w") as f:
         f.write(parsed_data.model_dump_json(indent=2))
         
     return {"message": "Resume successfully parsed and saved to JSON!"}
@@ -195,11 +198,11 @@ def chat(request: chatrequest):
 @app.post("/chat")
 def chat(request: chatrequest):
     # Check if the JSON exists; if not, tell the user to run the updater
-    if not os.path.exists("candidate_profile.json"):
+    if not os.path.exists(BASE_DIR / "candidate_profile.json"):
         return {"answer": "System Error: Please visit /update-resume first to generate the candidate profile."}
         
     # Read the JSON file instantly
-    with open("candidate_profile.json", "r") as f:
+    with open(BASE_DIR / "candidate_profile.json", "r") as f:
         resume_dict = json.load(f)
         
     resume = Resume(**resume_dict)
@@ -244,13 +247,13 @@ def ask_candidate_stream(question: str, resume: Resume):
 
 @app.post("/chat/stream")
 def chat_stream(request: chatrequest):
-    if not os.path.exists("candidate_profile.json"):
+    if not os.path.exists(BASE_DIR / "candidate_profile.json"):
         def error_gen():
             yield f"data: {json.dumps({'token': 'System Error: Please visit /update-resume first to generate the candidate profile.'})}\n\n"
             yield "data: [DONE]\n\n"
         return StreamingResponse(error_gen(), media_type="text/event-stream")
 
-    with open("candidate_profile.json", "r") as f:
+    with open(BASE_DIR / "candidate_profile.json", "r") as f:
         resume_dict = json.load(f)
 
     resume = Resume(**resume_dict)

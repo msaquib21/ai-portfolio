@@ -45,11 +45,19 @@ const Projects = () => {
             <div className={styles.projectDetails}>
               <div className={styles.detailCard}>
                 <h4>Pipeline Architecture</h4>
-                <p>3-node graph, RRF, self-healing JSON parser</p>
+                <p>3-node LangGraph stateful graph with conditional edges for agentic resume evaluation against job descriptions</p>
+              </div>
+              <div className={styles.detailCard}>
+                <h4>Retrieval Strategy</h4>
+                <p>Multi-query RAG with Reciprocal Rank Fusion (RRF) over ChromaDB vector store for precise candidate matching</p>
               </div>
               <div className={styles.detailCard}>
                 <h4>Production Engineering</h4>
-                <p>FastAPI+Pydantic, SHA-256 caching, local Ollama inference</p>
+                <p>FastAPI backend with SSE streaming, Pydantic schema validation, and SHA-256 caching for instant repeat queries</p>
+              </div>
+              <div className={styles.detailCard}>
+                <h4>Local LLM Inference</h4>
+                <p>Deployed Ollama with Qwen 2.5 3B for privacy-first, zero-cost local inference with self-healing JSON parser</p>
               </div>
             </div>
 
@@ -79,6 +87,21 @@ const Projects = () => {
               </p>
             </div>
             
+            <div className={styles.projectDetails}>
+              <div className={styles.detailCard}>
+                <h4>Data Ingestion</h4>
+                <p>Processed 6.5M+ game records from Chess.com REST API using the DLT (Data Load Tool) framework</p>
+              </div>
+              <div className={styles.detailCard}>
+                <h4>Storage Layer</h4>
+                <p>DuckDB for blazing-fast local OLAP analytics, MySQL for persistent relational storage and querying</p>
+              </div>
+              <div className={styles.detailCard}>
+                <h4>Visualization</h4>
+                <p>Interactive Power BI dashboard with 10+ custom DAX measures for player performance and game trend analysis</p>
+              </div>
+            </div>
+
             <div className={styles.techStack}>
               {['Python', 'DLT', 'DuckDB', 'MySQL', 'Power BI', 'DAX'].map((tech) => (
                 <span key={tech} className={styles.techPill}>{tech}</span>

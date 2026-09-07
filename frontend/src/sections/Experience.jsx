@@ -42,7 +42,7 @@ const Experience = () => {
                 <h3 className={styles.roleTitle}>Data & Application Engineer</h3>
                 <span className={styles.companyName}>Reliance Industries</span>
               </div>
-              <span className={styles.dateRange}>Aug 2023 - Present</span>
+              <span className={styles.dateRange}>Aug 2024 - Present</span>
             </div>
 
             <div className={styles.subCardsGrid}>
@@ -82,7 +82,7 @@ const Experience = () => {
                 <h3 className={styles.roleTitle}>Research Summer Intern</h3>
                 <span className={styles.companyName}>IIT Hyderabad</span>
               </div>
-              <span className={styles.dateRange}>May 2022 - Jul 2022</span>
+              <span className={styles.dateRange}>May 2023 - Jul 2023</span>
             </div>
             <p className={styles.internDesc}>
               Contributed to architecture research by developing and optimizing a RISC-V ISA simulator written in C++. Improved simulation accuracy and execution performance for advanced processor designs.

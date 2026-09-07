@@ -5,7 +5,7 @@ const NAV_SECTIONS = [
   { id: 'about', label: 'About' },
   { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
-  { id: 'stack', label: 'Tech Stack' },
+  { id: 'skills', label: 'Tech Stack' },
   { id: 'education', label: 'Education' },
   { id: 'contact', label: 'Contact' }
 ];

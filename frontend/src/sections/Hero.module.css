@@ -181,6 +181,7 @@
 .contentRight {
   perspective: 1200px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 500px;
@@ -261,21 +262,43 @@
   border-radius: 50%;
 }
 
-.cardBack {
-  transform: rotateY(-8deg) rotateX(5deg) translateZ(-60px);
-  z-index: 1;
-  opacity: 0.6;
+.slideCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
 }
 
-.cardMiddle {
-  transform: rotateY(-4deg) rotateX(3deg) translateZ(-30px);
-  z-index: 2;
-  opacity: 0.8;
+.slideCardActive {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
-.cardFront {
-  transform: rotateY(0deg) rotateX(0deg) translateZ(0px);
-  z-index: 3;
+.dotNav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border-medium);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dotActive {
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
 }
 
 @media (max-width: 1024px) {
@@ -290,18 +313,13 @@
   }
 
   .cardScene {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    width: 320px;
+    height: 240px;
+    margin: 0 auto;
     transform: none !important;
   }
 
   .isoCard {
-    position: relative;
-    transform: none !important;
-    opacity: 1 !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
 }
