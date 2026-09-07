@@ -206,7 +206,7 @@ const ChatPanel = ({ isOpen, onClose }) => {
             </button>
           </div>
           <div className={styles.footerHint}>
-            Powered by Llama 3.3 70B &middot; Press Enter to send
+            Press Enter to send
           </div>
         </div>
 

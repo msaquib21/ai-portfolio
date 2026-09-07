@@ -115,7 +115,6 @@ function AiShowcase({ onOpenChat }) {
               </svg>
               Ask Your Own Question
             </button>
-            <span className={styles.ctaHint}>Powered by Llama 3.3 70B · Real-time streaming</span>
           </div>
         </div>
       </div>
