@@ -47,29 +47,28 @@ const Experience = () => {
 
             <div className={styles.subCardsGrid}>
               <div className={styles.subCard}>
-                <h4 className={styles.subCardTitle}>Agentic AI & LLM Engineering</h4>
+                <h4 className={styles.subCardTitle}>Agentic AI & Document Intelligence</h4>
                 <p className={styles.subCardDesc}>
-                  Built a RAG-powered search engine over 200+ pages of MES/WMS specs using LangChain, ChromaDB & Azure OpenAI — achieving 90% retrieval accuracy at sub-7s latency. Shipped a Text-to-SQL engine with ReAct agent loops on Databricks SQL Warehouse (91% accuracy, 500+ users, 60% ticket reduction).
+                  Built an agentic document-extraction pipeline using LangGraph, Pydantic & a local LLM — achieving 97% field-level recall, 92% routing accuracy on a variance-aware evaluation suite, with template-caching cutting extraction latency 62% on recurring vendor formats.
                 </p>
                 <ul className={styles.stackList}>
-                  <li className={styles.stackPill}>LangChain</li>
                   <li className={styles.stackPill}>LangGraph</li>
-                  <li className={styles.stackPill}>ChromaDB</li>
-                  <li className={styles.stackPill}>Azure OpenAI</li>
-                  <li className={styles.stackPill}>RAG</li>
+                  <li className={styles.stackPill}>Pydantic</li>
+                  <li className={styles.stackPill}>Local LLM</li>
+                  <li className={styles.stackPill}>FastAPI</li>
                 </ul>
               </div>
               
               <div className={styles.subCard}>
-                <h4 className={styles.subCardTitle}>Data Engineering & Platform Automation</h4>
+                <h4 className={styles.subCardTitle}>Supply-Chain Investigation & Data Engineering</h4>
                 <p className={styles.subCardDesc}>
-                  Engineered an ASN Attachment App on Azure Databricks Apps with automated API-based data pipelines for supplier portal integration. Secured REST API data flows across 4+ teams via WSO2 IAM with strict RBAC for 500+ active shop-floor users.
+                  Engineered a Python-based ASN/GRN investigation engine with transaction attribution, deterministic reconciliation & evidence provenance — 93 automated tests and golden evaluation scenarios. Built an ASN Attachment App on Azure Databricks with automated data-ingestion pipelines.
                 </p>
                 <ul className={styles.stackList}>
+                  <li className={styles.stackPill}>Python</li>
                   <li className={styles.stackPill}>Databricks</li>
-                  <li className={styles.stackPill}>FastAPI</li>
-                  <li className={styles.stackPill}>WSO2 IAM</li>
                   <li className={styles.stackPill}>REST APIs</li>
+                  <li className={styles.stackPill}>WSO2 IAM</li>
                 </ul>
               </div>
             </div>

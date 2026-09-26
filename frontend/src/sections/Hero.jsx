@@ -43,33 +43,33 @@ const Typewriter = ({ strings }) => {
 const EXPERTISE_CARDS = [
   {
     icon: 'genai',
-    title: 'GenAI / LLMs',
+    title: 'Agentic AI & LLMs',
     color: 'var(--accent-secondary, #7c5cfc)',
-    items: ['LangChain / LangGraph', 'Azure OpenAI / GPT-4o', 'Prompt Engineering & ReAct']
+    items: ['LangGraph Stateful Pipelines', 'Local LLMs (Ollama) & Azure OpenAI', 'Prompt Engineering & ReAct Loops']
   },
   {
     icon: 'rag',
-    title: 'RAG Systems',
+    title: 'Document AI & RAG',
     color: 'var(--accent, #00e5bf)',
-    items: ['Vector DBs (ChromaDB, Pinecone)', 'Semantic Search & Hybrid Retrieval', '90% accuracy at <7s latency']
+    items: ['Pydantic Schema Validation', 'Multi-Query RAG & RRF Fusion', '97% Recall · 62% Latency Reduction']
   },
   {
     icon: 'data',
     title: 'Data Engineering',
     color: 'var(--accent-warm, #ff6b4a)',
-    items: ['Azure Databricks / SQL Warehouse', 'ETL/ELT Pipelines (DLT)', 'DuckDB / MySQL / PostgreSQL']
+    items: ['Azure Databricks & SQL Warehouse', 'ETL/ELT Pipelines (DLT)', 'DuckDB / MySQL / PostgreSQL']
   },
   {
     icon: 'backend',
     title: 'Backend & APIs',
     color: 'var(--accent, #00e5bf)',
-    items: ['FastAPI + Pydantic', 'REST APIs & WSO2 IAM', 'Docker & Git/GitHub']
+    items: ['FastAPI + Pydantic v2', 'REST APIs & WSO2 IAM (RBAC)', 'Docker & Git/GitHub']
   },
   {
     icon: 'analytics',
-    title: 'Analytics & Tooling',
+    title: 'Investigation & Systems',
     color: 'var(--accent-secondary, #7c5cfc)',
-    items: ['Power BI & DAX Dashboards', 'Text-to-SQL Engines', 'Hugging Face Transformers']
+    items: ['Deterministic Reconciliation', '93+ Automated Tests & Golden Suites', 'Power BI & DAX Dashboards']
   }
 ];
 
@@ -159,7 +159,7 @@ const Hero = ({ onOpenChat }) => {
           </h2>
 
           <p className={styles.description}>
-            Building RAG systems, Text-to-SQL engines, and LLM-powered automation at Reliance Industries.
+            Engineering agentic AI pipelines, LLM-powered automation, and deterministic data platforms at Reliance Industries.
           </p>
 
           <div className={styles.actions}>

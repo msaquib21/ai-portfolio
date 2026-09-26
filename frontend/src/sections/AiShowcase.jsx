@@ -4,11 +4,11 @@ import styles from './AiShowcase.module.css';
 const EXAMPLE_QA = [
   {
     q: 'What is your core tech stack?',
-    a: 'My core stack is Python, LangChain, LangGraph, and Azure OpenAI for agentic AI and LLM engineering. For data platforms I use Databricks, DuckDB, and SQL Warehouse. FastAPI + Pydantic for production APIs, and ChromaDB for vector search in RAG systems.',
+    a: 'My core stack is Python, LangGraph, LangChain, and Pydantic for agentic AI and document intelligence pipelines, along with local LLMs (Ollama) and Azure OpenAI. For data platforms, I use Azure Databricks, DuckDB, and SQL. Production backend with FastAPI and ChromaDB.',
   },
   {
-    q: 'Tell me about your RAG & LLM work',
-    a: 'At Reliance, I built a RAG-powered search engine over 200+ pages of MES/WMS technical specs using LangChain, ChromaDB, and Azure OpenAI (GPT-4o) — achieving 90% retrieval accuracy at sub-7s latency. I also shipped a Text-to-SQL engine with ReAct agent loops on Databricks SQL Warehouse, hitting 91% accuracy and enabling 500+ operators to self-serve KPIs.',
+    q: 'Tell me about your work at Reliance',
+    a: 'At Reliance, I built an agentic AI document-extraction pipeline using LangGraph, Pydantic, and a local LLM, achieving 97% field-level recall and 92% routing accuracy, with template caching cutting extraction latency by 62%. I also engineered a deterministic Python supply-chain investigation engine for ASN/GRN discrepancies backed by 93 automated tests.',
   },
   {
     q: 'What is the Agentic Resume Analyzer?',

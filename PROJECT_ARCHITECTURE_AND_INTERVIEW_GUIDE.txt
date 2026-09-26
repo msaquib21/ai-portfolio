@@ -248,7 +248,7 @@ D. Schema Contracts & Data Layer: Pydantic v2 + Structured Grounding
      * Enforces explicit negative constraints: "NEVER INVENT FACTS. If it is not
        in the JSON, Mohammad did not do it."
      * Encourages safe elaboration: Explains *how* technologies work together
-       (e.g., LangChain + ChromaDB + Azure OpenAI in the MES/WMS RAG system)
+       (e.g., LangGraph + Pydantic + local LLM in the Document Intelligence pipeline)
        without inventing false achievements.
 
 
