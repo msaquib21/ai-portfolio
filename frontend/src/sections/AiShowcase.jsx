@@ -4,15 +4,15 @@ import styles from './AiShowcase.module.css';
 const EXAMPLE_QA = [
   {
     q: 'What is your core tech stack?',
-    a: 'My core stack is Python, LangChain, and Azure OpenAI for GenAI work, with Databricks and SQL for data engineering. I also use FastAPI for APIs and ChromaDB for vector search.',
+    a: 'My core stack is Python, LangChain, LangGraph, and Azure OpenAI for agentic AI and LLM engineering. For data platforms I use Databricks, DuckDB, and SQL Warehouse. FastAPI + Pydantic for production APIs, and ChromaDB for vector search in RAG systems.',
   },
   {
-    q: 'Tell me about the RAG search engine',
-    a: 'I built a RAG-powered search engine over 200+ pages of MES/WMS technical specs using LangChain, ChromaDB, and Azure OpenAI (GPT-4o) — achieving 90% retrieval accuracy and cutting spec lookup from 30+ minutes to under 5.',
+    q: 'Tell me about your RAG & LLM work',
+    a: 'At Reliance, I built a RAG-powered search engine over 200+ pages of MES/WMS technical specs using LangChain, ChromaDB, and Azure OpenAI (GPT-4o) — achieving 90% retrieval accuracy at sub-7s latency. I also shipped a Text-to-SQL engine with ReAct agent loops on Databricks SQL Warehouse, hitting 91% accuracy and enabling 500+ operators to self-serve KPIs.',
   },
   {
-    q: 'How many years of experience?',
-    a: 'I have 2 years of professional experience — currently working as a Data & Application Engineer at Reliance Industries since August 2024, promoted from Graduate Engineer Trainee. Prior to that, I completed a research internship at IIT Hyderabad.',
+    q: 'What is the Agentic Resume Analyzer?',
+    a: 'It\'s my flagship personal project — a LangGraph-powered evaluation pipeline with a 3-node stateful graph, multi-query RAG with Reciprocal Rank Fusion over ChromaDB, SSE streaming, SHA-256 caching, and 100% local LLM inference via Ollama. Zero cloud API costs, full data privacy.',
   },
 ];
 

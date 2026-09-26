@@ -71,17 +71,17 @@ const About = () => {
       <div className={styles.content}>
         <div className={`${styles.bioCard} ${styles.tiltIn}`}>
           <p className={styles.bioText}>
-            I'm Mohammad Saquib, a Data & Application Engineer at Reliance Industries in Navi Mumbai, promoted from Graduate Engineer Trainee. I build production LLM-powered systems — from RAG search engines over 200+ pages of MES/WMS specs using LangChain, ChromaDB, and Azure OpenAI, to Text-to-SQL engines on Databricks enabling 500+ operators to self-serve KPIs.
+            I'm Mohammad Saquib, a Data & Application Engineer at Reliance Industries in Navi Mumbai, promoted from Graduate Engineer Trainee. I design and ship production LLM systems — from a RAG search engine over 200+ pages of MES/WMS specs (90% accuracy, sub-7s latency) to a Text-to-SQL engine with ReAct agent loops enabling 500+ operators to self-serve KPIs on Databricks SQL Warehouse.
           </p>
           <p className={styles.bioText}>
-            My strongest personal build is the Agentic Resume Analyzer: a LangGraph-powered evaluation pipeline with multi-query RAG, SSE streaming, and 100% local LLM inference via Ollama. I hold a B.Tech in CS from NIT Raipur and keep sharp on DSA across LeetCode and CodeChef.
+            On the data engineering side, I build Databricks applications and automated API pipelines for supply chain workflows, securing data flows via WSO2 IAM across cross-functional teams. My strongest personal project is the Agentic Resume Analyzer — a LangGraph-powered evaluation pipeline with multi-query RAG, Reciprocal Rank Fusion, SSE streaming, and fully local LLM inference via Ollama. B.Tech in CS from NIT Raipur.
           </p>
         </div>
 
         <div className={styles.infoGrid}>
           <Card label="Current" value="Data & Application Engineer, Reliance Industries" />
-          <Card label="Focus" value="LLM Automation & RAG Systems" />
-          <Card label="Systems" value="Python · FastAPI · Databricks" />
+          <Card label="Focus" value="Agentic AI · RAG Systems · Data Platforms" />
+          <Card label="Systems" value="Python · LangChain · FastAPI · Databricks" />
           <Card label="Education" value="B.Tech CSE, NIT Raipur" />
         </div>
       </div>

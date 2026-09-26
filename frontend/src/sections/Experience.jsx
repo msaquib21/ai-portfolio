@@ -47,26 +47,29 @@ const Experience = () => {
 
             <div className={styles.subCardsGrid}>
               <div className={styles.subCard}>
-                <h4 className={styles.subCardTitle}>GenAI & LLM Solutions</h4>
+                <h4 className={styles.subCardTitle}>Agentic AI & LLM Engineering</h4>
                 <p className={styles.subCardDesc}>
-                  Built RAG search engines over 200+ pages of MES/WMS specs and Text-to-SQL engines. Achieved 90% accuracy, 91% query accuracy, enabling 500+ operators to self-serve KPIs, reducing tickets by 60%.
+                  Built a RAG-powered search engine over 200+ pages of MES/WMS specs using LangChain, ChromaDB & Azure OpenAI — achieving 90% retrieval accuracy at sub-7s latency. Shipped a Text-to-SQL engine with ReAct agent loops on Databricks SQL Warehouse (91% accuracy, 500+ users, 60% ticket reduction).
                 </p>
                 <ul className={styles.stackList}>
                   <li className={styles.stackPill}>LangChain</li>
+                  <li className={styles.stackPill}>LangGraph</li>
                   <li className={styles.stackPill}>ChromaDB</li>
                   <li className={styles.stackPill}>Azure OpenAI</li>
+                  <li className={styles.stackPill}>RAG</li>
                 </ul>
               </div>
               
               <div className={styles.subCard}>
-                <h4 className={styles.subCardTitle}>Data Engineering</h4>
+                <h4 className={styles.subCardTitle}>Data Engineering & Platform Automation</h4>
                 <p className={styles.subCardDesc}>
-                  Developed Databricks applications and API pipelines integrating with WSO2 IAM, serving 500+ users with robust data delivery and access controls.
+                  Engineered an ASN Attachment App on Azure Databricks Apps with automated API-based data pipelines for supplier portal integration. Secured REST API data flows across 4+ teams via WSO2 IAM with strict RBAC for 500+ active shop-floor users.
                 </p>
                 <ul className={styles.stackList}>
                   <li className={styles.stackPill}>Databricks</li>
-                  <li className={styles.stackPill}>Python</li>
                   <li className={styles.stackPill}>FastAPI</li>
+                  <li className={styles.stackPill}>WSO2 IAM</li>
+                  <li className={styles.stackPill}>REST APIs</li>
                 </ul>
               </div>
             </div>
