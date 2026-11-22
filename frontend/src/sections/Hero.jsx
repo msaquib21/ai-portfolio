@@ -159,7 +159,7 @@ const Hero = ({ onOpenChat }) => {
           </h2>
 
           <p className={styles.description}>
-            Product manager and engineer turning AI ambition and complex systems into shipped products — from discovery and PRDs to experiments and delivery.
+            Product manager and engineer turning manufacturing and supply-chain pain points into shipped digital products — from discovery and PRDs to experiments and delivery. Two years at Reliance Industries across SAP, WMS and Databricks.
           </p>
 
           <div className={styles.actions}>

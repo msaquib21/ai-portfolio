@@ -100,6 +100,24 @@ const Projects = () => {
       techStack: ['AI Product', 'LLM', 'Guardrails', 'SAP', 'Teams', 'Product Design'],
     },
     {
+      id: 'resumeiq',
+      tag: 'PERSONAL PRODUCT - AI PRODUCT DESIGN',
+      title: 'ResumeIQ - Evidence-Grounded Resume Analyzer',
+      overview:
+        'Scoped and built a candidate-facing resume-to-JD analyzer for early-career job seekers in India who apply blindly - making trust the core product decision by keeping scoring out of the LLM.',
+      details: [
+        {
+          heading: 'The Problem & Trust Decision',
+          text: 'Early-career job seekers apply blindly; keyword-count ATS tools guess and over-claim. Made trust the core product decision: scoring kept out of the LLM via a deterministic, configurable weighted rubric (required skills 40%, experience 25%, responsibilities 20%, preferred 10%, qualifications 5%); every skill match cites its resume line; gaps reported as "no evidence found", never guessed. Built on a 3-node LangGraph stateful graph with multi-query RAG and Reciprocal Rank Fusion over ChromaDB.',
+        },
+        {
+          heading: 'The Rubric, Eval & Guardrails',
+          text: 'Built an Interview Evidence Map tagging each probe strong / thin / exposed - the differentiator over keyword-count ATS tools. Offline eval harness on 4 synthetic, hand-labeled resume cases (25/25 skill-status labels matched). LLM limited to JD extraction (local Ollama by default) behind a lexicon gate with deterministic fallback. FastAPI backend with SSE streaming, Pydantic validation, SHA-256 caching. Documented PRD, decision log and v2 roadmap.',
+        },
+      ],
+      techStack: ['Python', 'FastAPI', 'React', 'Ollama', 'LangGraph', 'ChromaDB', 'RAG'],
+    },
+    {
       id: 'rapido',
       tag: 'CASE STUDY · PRODUCT TEARDOWN · GROWTH',
       title: 'Why My Morning Ride Started Late',
@@ -137,7 +155,7 @@ const Projects = () => {
     },
   ];
 
-  const orderedIds = ['zepto', 'copilot', 'rapido', 'topmate'];
+  const orderedIds = ['zepto', 'copilot', 'resumeiq', 'rapido', 'topmate'];
 
   const orderedCaseStudies = caseStudies
     .filter((c) => orderedIds.includes(c.id))
@@ -148,7 +166,7 @@ const Projects = () => {
       <div className={styles.container}>
         <div className={`${styles.header} ${styles.reveal}`}>
           <span className={styles.sectionNumber}>03</span>
-          <h2 className={styles.sectionTitle}>FEATURED CASE STUDY</h2>
+          <h2 className={styles.sectionTitle}>FEATURED CASE STUDIES</h2>
           <div className={styles.headerLine}></div>
         </div>
 

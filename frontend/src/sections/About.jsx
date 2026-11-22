@@ -74,7 +74,7 @@ const About = () => {
             I'm Mohammad Saquib, a product-minded engineer turned Product Manager based in Navi Mumbai. At Reliance Industries, I spent two years turning manufacturing and supply-chain pain points into enterprise digital products — defining requirements, aligning business, technology and vendor teams, and delivering measurable outcomes across SAP, WMS and Databricks. I now apply the same discovery-to-metrics discipline to product work: teardowns, PRDs, experiments and AI copilots.
           </p>
           <p className={styles.bioText}>
-            My independent product work includes a Rapido booking-flow teardown (root cause, prototype, A/B plan), the Zepto contribution-margin case study, an AI copilot design for SAP called "Where Is My Material?", and a Topmate marketplace teardown. B.Tech in CS from NIT Raipur.
+            My independent product work includes the Zepto contribution-margin case study, an AI copilot design for SAP called "Where Is My Material?", a Rapido booking-flow teardown (root cause, prototype, A/B plan), a Topmate marketplace teardown, and ResumeIQ — an evidence-grounded resume-to-JD analyzer. B.Tech in CS from NIT Raipur. 5-star HackerRank Problem Solving; CodeChef Global Rank 312.
           </p>
         </div>
 

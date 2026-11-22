@@ -57,7 +57,8 @@
     "Git/GitHub",
     "REST APIs",
     "WSO2 IAM",
-    "Postman"
+    "Postman",
+    "React"
   ],
   "experiences": [
     {
@@ -116,7 +117,8 @@
     "Zepto Contribution-Margin Case | Product Strategy, RICE, A/B Testing: Audited FY26 unit economics and designed three levers to close the per-order contribution-margin loss.",
     "AI Copilot for SAP | AI Product Design: Designed a Teams copilot answering material and delivery questions from approved read-only SAP interfaces with strict guardrails.",
     "Rapido Bike Teardown | Product Teardown, A/B Testing: Diagnosed 5-min quote vs 10-14 min real wait; proposed rider-configured auto fare escalation with presets and caps.",
-    "Topmate Teardown | Marketplace Product: Career-guidance booking journey teardown with three-part fix (verified call status, path card, AI compare)."
+    "Topmate Teardown | Marketplace Product: Career-guidance booking journey teardown with three-part fix (verified call status, path card, AI compare).",
+    "ResumeIQ - Evidence-Grounded Resume Analyzer | Python, FastAPI, React, Ollama: Scoped a candidate-facing resume-to-JD analyzer; made trust the core product decision with a deterministic weighted rubric and an Interview Evidence Map; offline eval harness 25/25 skill-status labels matched; LLM limited to JD extraction behind a lexicon gate; documented PRD, decision log and v2 roadmap."
   ],
   "certifications": []
 }

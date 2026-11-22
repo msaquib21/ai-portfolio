@@ -14,6 +14,10 @@ const EXAMPLE_QA = [
     q: 'How do you approach discovery and prioritization?',
     a: 'I start with the problem, not the solution — like the Rapido teardown, which labeled OBSERVED / REPORTED / HYPOTHESIS before proposing rider-configured auto fare escalation. For prioritization I use RICE scoring and phased rollouts with explicit kill criteria.',
   },
+  {
+    q: 'Tell me about ResumeIQ.',
+    a: 'ResumeIQ is an evidence-grounded resume-to-JD analyzer for early-career job seekers in India who apply blindly. The core product decision was trust: scoring is kept out of the LLM via a deterministic, configurable weighted rubric (required skills 40%, experience 25%, responsibilities 20%, preferred 10%, qualifications 5%), every skill match cites its resume line, and gaps are reported as "no evidence found", never guessed. An Interview Evidence Map tags each probe strong / thin / exposed. An offline eval harness hit 25/25 skill-status labels on 4 hand-labeled cases. The LLM is limited to JD extraction (local Ollama by default) behind a lexicon gate with a deterministic fallback, with a FastAPI backend, SSE streaming and SHA-256 caching.',
+  },
 ];
 
 function AiShowcase({ onOpenChat }) {
