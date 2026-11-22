@@ -63,7 +63,7 @@
 
 .logoText {
   font-family: var(--font-mono, monospace);
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--text-primary, #fff);
   letter-spacing: -0.05em;
@@ -88,7 +88,7 @@
 .navLink {
   position: relative;
   font-family: var(--font-body, sans-serif);
-  font-size: 0.9rem;
+  font-size: 1.01rem;
   font-weight: 500;
   color: var(--text-secondary, #a0a0c0);
   text-decoration: none;
@@ -128,7 +128,7 @@
 .resumeBtn {
   display: none;
   font-family: var(--font-mono, monospace);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--accent, #4f46e5);
   text-decoration: none;
@@ -236,7 +236,7 @@
 
 .mobileNavLink {
   font-family: var(--font-display, sans-serif);
-  font-size: 2rem;
+  font-size: 2.24rem;
   font-weight: 700;
   color: var(--text-secondary, #a0a0c0);
   text-decoration: none;

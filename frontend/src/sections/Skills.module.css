@@ -21,13 +21,13 @@
 .sectionNumber {
   font-family: var(--font-mono, monospace);
   color: var(--accent, #4f46e5);
-  font-size: 1.2rem;
+  font-size: 1.34rem;
   font-weight: 500;
 }
 
 .sectionTitle {
   font-family: var(--font-display, inherit);
-  font-size: 2rem;
+  font-size: 2.24rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   margin: 0;
@@ -63,7 +63,7 @@
   padding: 0.75rem 1.5rem;
   border-radius: var(--radius-md, 8px);
   font-family: var(--font-mono, monospace);
-  font-size: 0.9rem;
+  font-size: 1.01rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -159,7 +159,7 @@
   font-family: var(--font-body, system-ui, sans-serif);
   font-weight: 600;
   color: var(--text-primary, #0f172a);
-  font-size: 1rem;
+  font-size: 1.12rem;
   letter-spacing: 0.02em;
   transform: translateZ(20px);
   transition: color 0.3s ease;

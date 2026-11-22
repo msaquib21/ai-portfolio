@@ -33,7 +33,7 @@ const ChatPanel = ({ isOpen, onClose }) => {
     const startWidth = panelWidth;
 
     const onMouseMove = (ev) => {
-      const newWidth = startWidth + (ev.clientX - startX);
+      const newWidth = startWidth - (ev.clientX - startX);
       setPanelWidth(Math.min(Math.max(newWidth, 320), 700));
     };
 

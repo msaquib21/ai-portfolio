@@ -14,14 +14,14 @@
 
 .headerIndex {
   font-family: var(--font-mono);
-  font-size: 1.5rem;
+  font-size: 1.68rem;
   color: var(--accent);
   font-weight: 500;
 }
 
 .headerTitle {
   font-family: var(--font-heading);
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: var(--text-primary);
   margin: 0;
   text-transform: uppercase;
@@ -58,7 +58,7 @@
 
 .bioText {
   font-family: var(--font-sans);
-  font-size: 1.125rem;
+  font-size: 1.26rem;
   line-height: 1.7;
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
@@ -96,7 +96,7 @@
 
 .infoLabel {
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: 0.98rem;
   color: var(--accent);
   margin-bottom: 0.75rem;
   text-transform: uppercase;
@@ -105,7 +105,7 @@
 
 .infoValue {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1.23rem;
   color: var(--text-primary);
   line-height: 1.4;
   font-weight: 500;

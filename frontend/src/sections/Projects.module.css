@@ -21,13 +21,13 @@
 .sectionNumber {
   font-family: var(--font-mono, monospace);
   color: var(--accent, #4f46e5);
-  font-size: 1.2rem;
+  font-size: 1.34rem;
   font-weight: 500;
 }
 
 .sectionTitle {
   font-family: var(--font-display, inherit);
-  font-size: 2rem;
+  font-size: 2.24rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   margin: 0;
@@ -85,7 +85,7 @@
 .flagshipBadge {
   display: inline-block;
   font-family: var(--font-mono, monospace);
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   font-weight: 600;
   color: var(--text-inverse, #ffffff);
   background: var(--accent, #4f46e5);
@@ -96,7 +96,7 @@
 }
 
 .caseStudyTitle {
-  font-size: 1.75rem;
+  font-size: 1.96rem;
   color: var(--text-primary, #0f172a);
   margin: 0 0 1rem 0;
   font-weight: 700;
@@ -175,7 +175,7 @@
 .projectTag {
   display: inline-block;
   font-family: var(--font-mono, monospace);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--accent-secondary, #7c3aed);
   margin-bottom: 0;
   text-transform: uppercase;
@@ -183,18 +183,18 @@
 }
 
 .projectTitle {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: var(--text-primary, #0f172a);
   margin: 0 0 1.5rem 0;
   font-weight: 700;
 }
 
 .secondaryProject .projectTitle {
-  font-size: 2rem;
+  font-size: 2.24rem;
 }
 
 .projectOverview {
-  font-size: 1.1rem;
+  font-size: 1.23rem;
   line-height: 1.6;
   color: var(--text-secondary, #475569);
   margin: 0;
@@ -236,13 +236,13 @@
 
 .detailCard h4 {
   font-family: var(--font-mono, monospace);
-  font-size: 0.9rem;
+  font-size: 1.01rem;
   color: var(--text-primary, #0f172a);
   margin: 0 0 0.75rem 0;
 }
 
 .detailCard p {
-  font-size: 0.95rem;
+  font-size: 1.06rem;
   color: var(--text-muted, #8a94a6);
   margin: 0;
   line-height: 1.5;
@@ -257,7 +257,7 @@
 
 .techPill {
   font-family: var(--font-mono, monospace);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   padding: 0.4rem 0.8rem;
   background-color: var(--bg-elevated, #ffffff);
   color: var(--text-secondary, #475569);
@@ -286,7 +286,7 @@
   color: var(--text-primary, #0f172a);
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.12rem;
   transition: color 0.2s ease;
 }
 

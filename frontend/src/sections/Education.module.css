@@ -21,7 +21,7 @@
   display: block;
   font-family: var(--font-mono, monospace);
   color: var(--accent, #4f46e5);
-  font-size: 0.875rem;
+  font-size: 0.98rem;
   letter-spacing: 0.1em;
   margin-bottom: 1rem;
 }
@@ -160,7 +160,7 @@
 
 .institution {
   font-family: var(--font-display, sans-serif);
-  font-size: 1.5rem;
+  font-size: 1.68rem;
   font-weight: 600;
   margin: 0;
   color: var(--text-primary, #ffffff);
@@ -175,13 +175,13 @@
 }
 
 .degree {
-  font-size: 1.1rem;
+  font-size: 1.23rem;
   color: var(--text-secondary, #a0a0b0);
 }
 
 .period {
   font-family: var(--font-mono, monospace);
-  font-size: 0.9rem;
+  font-size: 1.01rem;
   color: var(--text-muted, #707080);
   background: rgba(255, 255, 255, 0.05);
   padding: 0.25rem 0.75rem;

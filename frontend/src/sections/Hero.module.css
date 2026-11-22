@@ -35,7 +35,7 @@
   background-color: var(--bg-layer-2);
   border: 1px solid var(--border-medium);
   border-radius: 999px;
-  font-size: 0.875rem;
+  font-size: 0.98rem;
   color: var(--text-primary);
   margin-bottom: 32px;
   font-weight: 500;
@@ -113,7 +113,7 @@
 }
 
 .description {
-  font-size: 1.125rem;
+  font-size: 1.26rem;
   line-height: 1.6;
   color: var(--text-secondary);
   max-width: 500px;
@@ -134,7 +134,7 @@
   border-radius: 8px;
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.12rem;
   cursor: pointer;
   transition: all var(--ease-out) 0.2s;
   text-decoration: none;
@@ -230,7 +230,7 @@
 
 .cardHeader h3 {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: var(--text-primary);
   margin: 0;
@@ -247,7 +247,7 @@
 
 .cardTech li {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 1.06rem;
   display: flex;
   align-items: center;
   gap: 8px;

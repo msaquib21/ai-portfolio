@@ -16,7 +16,7 @@
   display: block;
   font-family: var(--font-mono, monospace);
   color: var(--accent, #4f46e5);
-  font-size: 0.875rem;
+  font-size: 0.98rem;
   letter-spacing: 0.1em;
   margin-bottom: 3rem;
 }
@@ -88,7 +88,7 @@
 }
 
 .subtitle {
-  font-size: 1.125rem;
+  font-size: 1.26rem;
   color: var(--text-secondary, #475569);
   line-height: 1.6;
   max-width: 450px;
@@ -106,7 +106,7 @@
   border-radius: var(--radius-sm, 0.5rem);
   font-weight: 600;
   font-family: var(--font-mono, monospace);
-  font-size: 0.9rem;
+  font-size: 1.01rem;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -184,13 +184,13 @@ a.tile:hover {
 
 .tileLabel {
   font-family: var(--font-mono, monospace);
-  font-size: 0.75rem;
+  font-size: 0.84rem;
   color: var(--text-muted, #8a94a6);
   letter-spacing: 0.05em;
 }
 
 .tileValue {
-  font-size: 1.1rem;
+  font-size: 1.23rem;
   color: var(--text-primary, #0f172a);
   font-weight: 500;
 }
@@ -210,7 +210,7 @@ a.tile:hover .tileValue {
   padding-top: 2rem;
   border-top: 1px solid var(--border-subtle, rgba(15, 23, 42, 0.08));
   font-family: var(--font-mono, monospace);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--text-muted, #8a94a6);
 }
 

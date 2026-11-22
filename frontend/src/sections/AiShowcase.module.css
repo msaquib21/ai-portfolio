@@ -31,7 +31,7 @@
 .index {
   display: inline-block;
   font-family: var(--font-mono, monospace);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--accent, #4f46e5);
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -48,7 +48,7 @@
 }
 
 .subtitle {
-  font-size: 1.1rem;
+  font-size: 1.23rem;
   line-height: 1.6;
   color: var(--text-secondary, #475569);
   max-width: 560px;
@@ -88,7 +88,7 @@
   border-radius: 999px;
   padding: 8px 18px;
   font-family: var(--font-body, sans-serif);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--text-secondary, #475569);
   cursor: pointer;
   transition: all 0.25s ease;
@@ -124,7 +124,7 @@
   border-radius: 16px 16px 4px 16px;
   padding: 14px 18px;
   color: var(--text-primary, #0f172a);
-  font-size: 0.95rem;
+  font-size: 1.06rem;
   line-height: 1.5;
 }
 
@@ -185,7 +185,7 @@
   border-radius: 16px 16px 16px 4px;
   padding: 14px 18px;
   color: var(--text-primary, #0f172a);
-  font-size: 0.95rem;
+  font-size: 1.06rem;
   line-height: 1.6;
   flex: 1;
   min-height: 48px;
@@ -221,7 +221,7 @@
   color: var(--text-inverse, #0f172a);
   font-family: var(--font-body, sans-serif);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.12rem;
   border: none;
   cursor: pointer;
   transition: all 0.25s ease;
@@ -236,7 +236,7 @@
 
 .ctaHint {
   font-family: var(--font-mono, monospace);
-  font-size: 0.78rem;
+  font-size: 0.87rem;
   color: var(--text-muted, #8a94a6);
 }
 
