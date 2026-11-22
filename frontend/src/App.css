@@ -9,6 +9,7 @@
 
   --border-dim: rgba(15, 23, 42, 0.05);
   --border-subtle: rgba(15, 23, 42, 0.1);
+  --border-light: rgba(15, 23, 42, 0.06);
   --border-medium: rgba(15, 23, 42, 0.18);
 
   --text-primary: #0f172a;
@@ -22,6 +23,8 @@
   --accent-warm: #ff6b4a;
 
   --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   --font-display: 'Space Grotesk', sans-serif;
 

@@ -1,6 +1,37 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './Projects.module.css';
 
+const CaseStudy = ({ tag, title, overview, details, techStack, githubLink }) => {
+  return (
+    <div className={`${styles.featuredProject} ${styles.reveal}`}>
+      <div className={styles.projectHeader}>
+        <span className={styles.projectTag}>{tag}</span>
+        <h3 className={styles.projectTitle}>{title}</h3>
+        <p className={styles.projectOverview}>{overview}</p>
+      </div>
+
+      <div className={styles.projectDetails}>
+        {details.map((d) => (
+          <div className={styles.detailCard} key={d.heading}>
+            <h4>{d.heading}</h4>
+            <p>{d.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className={styles.techStack}>
+        {techStack.map((tech) => (
+          <span key={tech} className={styles.techPill}>{tech}</span>
+        ))}
+      </div>
+
+      <div className={styles.projectLinks}>
+        {githubLink}
+      </div>
+    </div>
+  );
+};
+
 const Projects = () => {
   const sectionRef = useRef(null);
 
@@ -31,6 +62,87 @@ const Projects = () => {
     </a>
   );
 
+  const caseStudies = [
+    {
+      id: 'zepto',
+      tag: 'CASE STUDY · PRODUCT STRATEGY & GROWTH',
+      title: 'Closing the ₹79 Order Gap',
+      overview:
+        'Audited Zepto’s FY26 unit economics and designed three product levers to close the ~₹79 per-order contribution-margin loss — without ever compromising the 10-minute delivery promise. Revenue had grown sharply, but contribution margin had not.',
+      details: [
+        {
+          heading: 'The North Star',
+          text: 'Contribution margin per order = gross margin + ad revenue − fulfilment, last-mile and dark-store cost − customer incentives. Every bet is judged on its CM/order delta, not GMV.',
+        },
+        {
+          heading: 'The Three Levers',
+          text: 'Margin-aware second tier on the cart milestone ladder; Flexi-Batch opt-in plus 1-tap split-cart consolidation; persona-targeted, outcome-priced ad shelf in the cart and after checkout. Phased rollout with explicit kill criteria, targeting ~₹32/order.',
+        },
+      ],
+      techStack: ['Strategy', 'Growth', 'RICE', 'A/B Testing', 'CM Modeling', 'SQL'],
+    },
+    {
+      id: 'copilot',
+      tag: 'CASE STUDY · AI PRODUCT DESIGN',
+      title: 'Where Is My Material?',
+      overview:
+        'Designed an AI copilot in Microsoft Teams that answers everyday material and delivery questions from approved read-only SAP interfaces — turning the informal colleague-as-helpdesk workflow into a governed, trusted assistant.',
+      details: [
+        {
+          heading: 'The Problem',
+          text: 'People who needed delivery or stock status could not open the company’s records system, so they pinged colleagues on Teams and waited 1–2 hours. The informal workaround quietly became an unofficial help desk with no audit trail of who asked what, when, or whether the answer was still valid.',
+        },
+        {
+          heading: 'Design & Guardrails',
+          text: 'Chose the AI assistant over a process fix, status page or rule bot through a structured options analysis. The assistant only restates facts returned by approved read-only interfaces — it never guesses or calculates quantities. Answers carry the source record and an “as of” time; version 1 is fully read-only; every question type ships with an off switch. The AI earns its place here because the same operational question is asked in many words and good answers need facts from several places at once.',
+        },
+      ],
+      techStack: ['AI Product', 'LLM', 'Guardrails', 'SAP', 'Teams', 'Product Design'],
+    },
+    {
+      id: 'rapido',
+      tag: 'CASE STUDY · PRODUCT TEARDOWN · GROWTH',
+      title: 'Why My Morning Ride Started Late',
+      overview:
+        'Teardown of Rapido Bike’s booking flow: the app quoted a ~5-minute pickup that reality delivered as a 10–14 minute wait. TL;DR — quoted ~11 min from booking to drop, actual 16–20; time saved vs walking fell from ~14 min to 5–9 min.',
+      details: [
+        {
+          heading: 'Root Cause & Method',
+          text: 'Investigation labeled OBSERVED / REPORTED / HYPOTHESIS across timed rides, a captain interview and competitor comparison; found manual +₹5 to +₹20 fare top-ups meant every rider tap restarted the captain search, with captains weighing distance, direction and next order — latency nobody had budgeted for.',
+        },
+        {
+          heading: 'The Fix & The Test',
+          text: 'Rider-configured auto-escalation with presets (Relaxed / Normal / Urgent) or custom cap; the app raises the fare on the same request and never above the rider’s cap. Single north star: captain at pickup ≤10 min. Designed a 2-week A/B test plan.',
+        },
+      ],
+      techStack: ['Product Teardown', 'Growth', 'A/B Testing', 'Pricing'],
+    },
+    {
+      id: 'topmate',
+      tag: 'CASE STUDY · PRODUCT TEARDOWN · MARKETPLACE',
+      title: 'Finding the Right Expert on Topmate',
+      overview:
+        'Teardown of Topmate’s 1:1 career-guidance marketplace from my own seeker testing — 25–30 LinkedIn profiles checked to book just 9 calls; 9 calls booked in 4 days; 5+ missed calls still marked “Completed”.',
+      details: [
+        {
+          heading: 'The Gaps',
+          text: 'Gap 1 — hard to choose: career paths were not shown in a comparable way and ratings were almost all 5.0, so seekers left to check LinkedIn manually. Gap 2 — unreliable record: missed calls were marked “Completed”, so ratings, refunds and show-up numbers could not be trusted.',
+        },
+        {
+          heading: 'The Fix & The Test',
+          text: 'Three-part fix: (A) seeker filters covering city, field of study, first job, years of experience, company type and visit frequency; (B) AI Compare — seeker shortlists 5–7 experts and gets one side-by-side screen with the AI note on who fits best and why; (C) status page / alerts / rule bot / AI assistant staged by confidence. Build order: verified call status → path card → compare; pilot A/B measured calls that really happened per 100 bookings.',
+        },
+      ],
+      techStack: ['Marketplace', 'Discovery', 'AI', 'Trust & Safety'],
+    },
+  ];
+
+  const orderedIds = ['zepto', 'copilot', 'rapido', 'topmate'];
+
+  const orderedCaseStudies = caseStudies
+    .filter((c) => orderedIds.includes(c.id))
+    .sort((a, b) => orderedIds.indexOf(a.id) - orderedIds.indexOf(b.id));
+
   return (
     <section className={styles.section} id="projects" ref={sectionRef}>
       <div className={styles.container}>
@@ -40,169 +152,18 @@ const Projects = () => {
           <div className={styles.headerLine}></div>
         </div>
 
-        {/* ── Featured Case Study: Zepto ── */}
-        <div className={`${styles.featuredProject} ${styles.reveal}`}>
-          <div className={styles.projectHeader}>
-            <span className={styles.projectTag}>CASE STUDY · PRODUCT STRATEGY &amp; GROWTH</span>
-            <h3 className={styles.projectTitle}>Closing the ₹79 Order Gap</h3>
-            <p className={styles.projectOverview}>
-              Audited Zepto's FY26 unit economics and designed three product levers to close the ~₹79 per-order
-              contribution-margin loss — without ever compromising the 10-minute delivery promise.
-            </p>
-          </div>
-
-          <div className={styles.projectDetails}>
-            <div className={styles.detailCard}>
-              <h4>The North Star</h4>
-              <p>
-                Contribution margin per order = gross margin + ad revenue − fulfilment, last-mile and dark-store cost −
-                customer incentives. Every bet is judged on its CM/order delta, not GMV.
-              </p>
-            </div>
-            <div className={styles.detailCard}>
-              <h4>The Three Levers</h4>
-              <p>
-                Margin-aware second tier on the cart milestone ladder; Flexi-Batch opt-in plus 1-tap split-cart
-                consolidation; persona-targeted, outcome-priced ad shelf in the cart and after checkout.
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.techStack}>
-            {['Strategy', 'Growth', 'RICE', 'A/B Testing', 'CM Modeling', 'SQL'].map((tech) => (
-              <span key={tech} className={styles.techPill}>{tech}</span>
-            ))}
-          </div>
-
-          <div className={styles.projectLinks}>
-            {githubLink}
-          </div>
-        </div>
-
-        {/* ── Case Studies & Product Teardowns ── */}
-        <div className={styles.caseStudiesGrid}>
-          {/* AI Copilot Case Study */}
-          <div className={`${styles.caseStudyCard} ${styles.reveal}`}>
-            <div className={styles.projectHeader}>
-              <span className={styles.projectTag}>CASE STUDY · AI PRODUCT DESIGN</span>
-              <h4 className={styles.caseStudyTitle}>Where Is My Material?</h4>
-              <p className={styles.projectOverview}>
-                Designed an AI copilot in Microsoft Teams that answers everyday material and delivery questions from
-                approved read-only SAP interfaces — turning the unofficial colleague-as-helpdesk workflow into a
-                governed assistant.
-              </p>
-            </div>
-
-            <div className={styles.projectDetails}>
-              <div className={styles.detailCard}>
-                <h4>The Problem</h4>
-                <p>
-                  People who need delivery or stock status cannot open the company's records system, so they ask a
-                  colleague on Teams and wait 1–2 hours. The colleague becomes an unofficial help desk with no record of
-                  who asked what.
-                </p>
-              </div>
-              <div className={styles.detailCard}>
-                <h4>Design &amp; Guardrails</h4>
-                <p>
-                  Chose the AI assistant over a process fix, status page or rule bot through a structured options
-                  analysis. The AI only restates facts from approved interfaces, never calculates or guesses quantities;
-                  answers carry source and an &quot;as of&quot; time; version 1 is fully read-only; every question type
-                  ships with an off switch.
-                </p>
-              </div>
-            </div>
-
-            <div className={styles.techStack}>
-              {['AI Product', 'LLM', 'Guardrails', 'SAP', 'Teams', 'Product Design'].map((tech) => (
-                <span key={tech} className={styles.techPill}>{tech}</span>
-              ))}
-            </div>
-
-            <div className={styles.projectLinks}>
-              {githubLink}
-            </div>
-          </div>
-
-          {/* Rapido Teardown */}
-          <div className={`${styles.caseStudyCard} ${styles.reveal}`}>
-            <div className={styles.projectHeader}>
-              <span className={styles.projectTag}>CASE STUDY · PRODUCT TEARDOWN · GROWTH</span>
-              <h4 className={styles.caseStudyTitle}>Why My Morning Ride Started Late</h4>
-              <p className={styles.projectOverview}>
-                Teardown of Rapido&apos;s booking flow: a 5-minute quoted pickup versus a 10–14 minute real wait. Root
-                cause: manual fare top-ups restarting searches. Rider-configured auto-escalation proposed with presets
-                and caps.
-              </p>
-            </div>
-
-            <div className={styles.projectDetails}>
-              <div className={styles.detailCard}>
-                <h4>Method</h4>
-                <p>
-                  Labeled OBSERVED / REPORTED / HYPOTHESIS across timed rides, a captain interview and competitor
-                  comparison.
-                </p>
-              </div>
-              <div className={styles.detailCard}>
-                <h4>Design</h4>
-                <p>
-                  Rider sets a raise rule once before booking (Relaxed / Normal / Urgent or custom); the app raises the
-                  fare on the same request, never above the rider&apos;s cap.
-                </p>
-              </div>
-            </div>
-
-            <div className={styles.techStack}>
-              {['Product Teardown', 'Growth', 'A/B Testing', 'Pricing'].map((tech) => (
-                <span key={tech} className={styles.techPill}>{tech}</span>
-              ))}
-            </div>
-
-            <div className={styles.projectLinks}>
-              {githubLink}
-            </div>
-          </div>
-
-          {/* Topmate Teardown */}
-          <div className={`${styles.caseStudyCard} ${styles.reveal}`}>
-            <div className={styles.projectHeader}>
-              <span className={styles.projectTag}>CASE STUDY · PRODUCT TEARDOWN · MARKETPLACE</span>
-              <h4 className={styles.caseStudyTitle}>Finding the Right Expert on Topmate</h4>
-              <p className={styles.projectOverview}>
-                Teardown of Topmate&apos;s career-guidance marketplace: hard-to-choose gaps and an unreliable call
-                record. Three-part fix — verified call status, path card, AI compare — with build order and test design.
-              </p>
-            </div>
-
-            <div className={styles.projectDetails}>
-              <div className={styles.detailCard}>
-                <h4>Gaps</h4>
-                <p>
-                  Career paths were not shown in a comparable way and ratings were almost all 5.0, so seekers left to
-                  check LinkedIn. Missed calls were marked &quot;Completed&quot;, so ratings, refunds and show-up numbers
-                  could not be trusted.
-                </p>
-              </div>
-              <div className={styles.detailCard}>
-                <h4>Fix &amp; Test</h4>
-                <p>
-                  Build order: verified call status → path card → compare. Pilot design: 4-week A/B on calls that really
-                  happen per 100 bookings.
-                </p>
-              </div>
-            </div>
-
-            <div className={styles.techStack}>
-              {['Marketplace', 'Discovery', 'AI', 'Trust & Safety'].map((tech) => (
-                <span key={tech} className={styles.techPill}>{tech}</span>
-              ))}
-            </div>
-
-            <div className={styles.projectLinks}>
-              {githubLink}
-            </div>
-          </div>
+        <div className={styles.projectsGrid}>
+          {orderedCaseStudies.map((c) => (
+            <CaseStudy
+              key={c.id}
+              tag={c.tag}
+              title={c.title}
+              overview={c.overview}
+              details={c.details}
+              techStack={c.techStack}
+              githubLink={githubLink}
+            />
+          ))}
         </div>
       </div>
     </section>
