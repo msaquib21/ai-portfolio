@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './Projects.module.css';
 
-const CaseStudy = ({ tag, title, overview, details, techStack, githubLink, flagship }) => {
+const CaseStudy = ({ tag, title, overview, details, techStack, githubLink, liveLink, flagship }) => {
   return (
     <div className={styles.caseStudyCard}>
       <div className={styles.projectHeader}>
@@ -29,7 +29,7 @@ const CaseStudy = ({ tag, title, overview, details, techStack, githubLink, flags
           ))}
         </div>
         <div className={styles.projectLinks}>
-          {githubLink}
+          {liveLink ? liveLink : githubLink}
         </div>
       </div>
     </div>
@@ -118,6 +118,14 @@ const Projects = () => {
         },
       ],
       techStack: ['Python', 'FastAPI', 'React', 'Ollama', 'LangGraph', 'ChromaDB', 'RAG'],
+      liveLink: (
+        <a href="https://ai-resume-project-ochre.vercel.app/" target="_blank" rel="noreferrer" className={styles.githubLink}>
+          Try Live
+          <svg className={styles.arrowIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      ),
     },
     {
       tag: 'CASE STUDY - PRODUCT TEARDOWN - GROWTH',
