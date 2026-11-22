@@ -44,31 +44,31 @@ const EXPERTISE_CARDS = [
   {
     icon: 'genai',
     title: 'AI Product Design',
-    color: 'var(--accent-secondary, #7c5cfc)',
+    color: 'var(--accent-secondary, #7c3aed)',
     items: ['Copilot Design · SAP', 'LLM Evals & Guardrails', 'Hybrid LLM + Deterministic']
   },
   {
     icon: 'rag',
     title: 'Product Strategy & Discovery',
-    color: 'var(--accent, #0d9488)',
+    color: 'var(--accent, #4f46e5)',
     items: ['RICE & Prioritization', 'PRDs & JTBD', 'Roadmapping']
   },
   {
     icon: 'data',
     title: 'Experimentation & Metrics',
-    color: 'var(--accent-warm, #ff6b4a)',
+    color: 'var(--accent-warm, #f59e0b)',
     items: ['A/B Test Design & Sizing', 'Contribution Margin', 'Funnel & Guardrails']
   },
   {
     icon: 'backend',
     title: 'Delivery & Technical Leverage',
-    color: 'var(--accent, #0d9488)',
+    color: 'var(--accent, #4f46e5)',
     items: ['Cross-functional Delivery', 'SAP · WMS Integrations', 'API Enablement']
   },
   {
     icon: 'analytics',
     title: 'Analytics & Insight',
-    color: 'var(--accent-secondary, #7c5cfc)',
+    color: 'var(--accent-secondary, #7c3aed)',
     items: ['SQL · Product Analytics', 'Event Instrumentation', 'Root-Cause Analysis']
   }
 ];

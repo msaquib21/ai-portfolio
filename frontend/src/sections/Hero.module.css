@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 120px 24px 80px;
+  padding: 7rem 1.5rem 5rem;
   background-color: var(--bg-deep);
   position: relative;
   overflow: hidden;
@@ -218,7 +218,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(13, 148, 136, 0.25), transparent);
+  background: linear-gradient(90deg, transparent, rgba(79, 70, 229, 0.25), transparent);
 }
 
 .cardHeader {

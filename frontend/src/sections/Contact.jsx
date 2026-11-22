@@ -30,7 +30,7 @@ export default function Contact({ onOpenChat }) {
   return (
     <section id="contact" className={styles.contactSection} ref={sectionRef}>
       <div className={styles.container}>
-        <span className={styles.sectionNumber}>06 &mdash; CONTACT</span>
+        <span className={styles.sectionNumber}>06</span>
         
         <div className={styles.cardContainer}>
           <div className={styles.mainCard}>

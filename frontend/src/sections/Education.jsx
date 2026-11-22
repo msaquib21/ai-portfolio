@@ -63,7 +63,7 @@ export default function Education() {
     <section id="education" className={styles.educationSection} ref={sectionRef}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.sectionNumber}>05 &mdash; EDUCATION</span>
+          <span className={styles.sectionNumber}>05</span>
           <h2 className={styles.title}>Academic Background</h2>
         </div>
 
