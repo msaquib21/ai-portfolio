@@ -14,7 +14,8 @@
 
 .panel {
   width: 100%;
-  max-width: 440px;
+  max-width: 700px;
+  min-width: 320px;
   height: 100vh;
   background-color: var(--bg-elevated, #ffffff);
   box-shadow: -10px 0 30px rgba(15, 23, 42, 0.15);
@@ -37,6 +38,21 @@
   align-items: center;
   border-bottom: 1px solid var(--border-subtle, rgba(15, 23, 42, 0.1));
   background-color: var(--bg-layer-1, #ffffff);
+  cursor: default;
+}
+
+.resizeHandle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  cursor: ew-resize;
+  z-index: 1;
+}
+
+.resizeHandle:hover {
+  background: rgba(79, 70, 229, 0.15);
 }
 
 .headerLeft {

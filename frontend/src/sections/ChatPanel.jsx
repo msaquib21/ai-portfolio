@@ -14,7 +14,9 @@ const ChatPanel = ({ isOpen, onClose }) => {
   const [inputText, setInputText] = useState('');
   const [isStreaming, setIsStreaming] = useState(false);
   const [streamingContent, setStreamingContent] = useState('');
+  const [panelWidth, setPanelWidth] = useState(440);
   const messagesEndRef = useRef(null);
+  const resizeRef = useRef(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -23,6 +25,26 @@ const ChatPanel = ({ isOpen, onClose }) => {
   useEffect(() => {
     scrollToBottom();
   }, [messages, streamingContent]);
+
+  // Resize panel width by dragging the left edge
+  const handleResizeStart = (e) => {
+    e.preventDefault();
+    const startX = e.clientX;
+    const startWidth = panelWidth;
+
+    const onMouseMove = (ev) => {
+      const newWidth = startWidth + (ev.clientX - startX);
+      setPanelWidth(Math.min(Math.max(newWidth, 320), 700));
+    };
+
+    const onMouseUp = () => {
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('mouseup', onMouseUp);
+    };
+
+    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('mouseup', onMouseUp);
+  };
 
   const handleSend = async (textOverride) => {
     const text = textOverride || inputText;
@@ -82,9 +104,12 @@ const ChatPanel = ({ isOpen, onClose }) => {
 
   return (
     <div className={styles.overlay} onClick={onClose}>
-      <div className={`${styles.panel} ${isOpen ? styles.open : ''}`} onClick={e => e.stopPropagation()}>
-        
-        <div className={styles.header}>
+      <div
+        className={`${styles.panel} ${isOpen ? styles.open : ''}`}
+        onClick={e => e.stopPropagation()}
+        style={{ width: `${panelWidth}px` }}
+      >
+        <div className={styles.header} onMouseDown={handleResizeStart}>
           <div className={styles.headerLeft}>
             <div className={styles.cubeContainer}>
               <div className={styles.cube}>
@@ -106,6 +131,7 @@ const ChatPanel = ({ isOpen, onClose }) => {
               <path d="M18 6L6 18M6 6l12 12"></path>
             </svg>
           </button>
+          <div className={styles.resizeHandle} onMouseDown={handleResizeStart} />
         </div>
 
         <div className={styles.messagesArea}>
