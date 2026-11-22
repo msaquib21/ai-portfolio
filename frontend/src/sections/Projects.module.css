@@ -53,11 +53,17 @@
   perspective: 1200px;
 }
 
+.caseStudiesStack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .caseStudyCard {
   background-color: var(--bg-layer-1, #ffffff);
   border: 1px solid var(--border-subtle, rgba(15, 23, 42, 0.1));
-  border-radius: var(--radius-md, 8px);
-  padding: 2.5rem;
+  border-radius: var(--radius-lg, 12px);
+  padding: 2rem;
   box-shadow: var(--shadow-depth-1, 0 4px 6px -1px rgba(15, 23, 42, 0.06));
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
@@ -68,22 +74,49 @@
   border-color: var(--border-medium, rgba(15, 23, 42, 0.18));
 }
 
-.caseStudyCard .projectDetails {
-  grid-template-columns: repeat(2, 1fr);
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
 }
 
-@media (max-width: 768px) {
-  .caseStudyCard .projectDetails {
-    grid-template-columns: 1fr;
-  }
+.flagshipBadge {
+  display: inline-block;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-inverse, #ffffff);
+  background: var(--accent, #4f46e5);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .caseStudyTitle {
-  font-size: 1.9rem;
+  font-size: 1.75rem;
   color: var(--text-primary, #0f172a);
-  margin: 0 0 1.25rem 0;
+  margin: 0 0 1rem 0;
   font-weight: 700;
   font-family: var(--font-display, sans-serif);
+  line-height: 1.25;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle, rgba(15, 23, 42, 0.1));
+}
+
+.cardFooter .techStack {
+  margin-bottom: 0;
 }
 
 .featuredProject {
@@ -144,7 +177,7 @@
   font-family: var(--font-mono, monospace);
   font-size: 0.85rem;
   color: var(--accent-secondary, #7c3aed);
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }

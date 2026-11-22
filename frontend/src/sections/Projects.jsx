@@ -1,12 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './Projects.module.css';
 
-const FeaturedCaseStudy = ({ tag, title, overview, details, techStack, githubLink }) => {
+const CaseStudy = ({ tag, title, overview, details, techStack, githubLink, flagship }) => {
   return (
-    <div className={`${styles.featuredProject} ${styles.reveal}`}>
+    <div className={styles.caseStudyCard}>
       <div className={styles.projectHeader}>
-        <span className={styles.projectTag}>{tag}</span>
-        <h3 className={styles.projectTitle}>{title}</h3>
+        <div className={styles.titleRow}>
+          <span className={styles.projectTag}>{tag}</span>
+          {flagship && <span className={styles.flagshipBadge}>Flagship</span>}
+        </div>
+        <h3 className={styles.caseStudyTitle}>{title}</h3>
         <p className={styles.projectOverview}>{overview}</p>
       </div>
 
@@ -19,45 +22,15 @@ const FeaturedCaseStudy = ({ tag, title, overview, details, techStack, githubLin
         ))}
       </div>
 
-      <div className={styles.techStack}>
-        {techStack.map((tech) => (
-          <span key={tech} className={styles.techPill}>{tech}</span>
-        ))}
-      </div>
-
-      <div className={styles.projectLinks}>
-        {githubLink}
-      </div>
-    </div>
-  );
-};
-
-const CompactCaseStudy = ({ tag, title, overview, details, techStack, githubLink }) => {
-  return (
-    <div className={`${styles.caseStudyCard} ${styles.reveal}`}>
-      <div className={styles.projectHeader}>
-        <span className={styles.projectTag}>{tag}</span>
-        <h4 className={styles.caseStudyTitle}>{title}</h4>
-        <p className={styles.projectOverview}>{overview}</p>
-      </div>
-
-      <div className={styles.projectDetails}>
-        {details.map((d) => (
-          <div className={styles.detailCard} key={d.heading}>
-            <h4>{d.heading}</h4>
-            <p>{d.text}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className={styles.techStack}>
-        {techStack.map((tech) => (
-          <span key={tech} className={styles.techPill}>{tech}</span>
-        ))}
-      </div>
-
-      <div className={styles.projectLinks}>
-        {githubLink}
+      <div className={styles.cardFooter}>
+        <div className={styles.techStack}>
+          {techStack.map((tech) => (
+            <span key={tech} className={styles.techPill}>{tech}</span>
+          ))}
+        </div>
+        <div className={styles.projectLinks}>
+          {githubLink}
+        </div>
       </div>
     </div>
   );
@@ -93,30 +66,30 @@ const Projects = () => {
     </a>
   );
 
-  const zepto = {
-    tag: 'CASE STUDY — PRODUCT STRATEGY & GROWTH',
-    title: 'Closing the ₹79 Order Gap',
-    overview:
-      'Audited Zepto FY26 unit economics and designed three product levers to close the ~₹79 per-order contribution-margin loss — without ever compromising the 10-minute delivery promise. Revenue had grown sharply, but contribution margin had not.',
-    details: [
-      {
-        heading: 'The North Star',
-        text: 'Contribution margin per order = gross margin + ad revenue — fulfilment, last-mile and dark-store cost — customer incentives. Every bet is judged on its CM/order delta, not GMV.',
-      },
-      {
-        heading: 'The Three Levers',
-        text: 'Margin-aware second tier on the cart milestone ladder; Flexi-Batch opt-in plus 1-tap split-cart consolidation; persona-targeted, outcome-priced ad shelf in the cart and after checkout. Phased rollout with explicit kill criteria, targeting ~₹32/order.',
-      },
-    ],
-    techStack: ['Strategy', 'Growth', 'RICE', 'A/B Testing', 'CM Modeling', 'SQL'],
-  };
-
-  const compactCases = [
+  const caseStudies = [
     {
-      tag: 'CASE STUDY — AI PRODUCT DESIGN',
+      flagship: true,
+      tag: 'CASE STUDY - PRODUCT STRATEGY & GROWTH',
+      title: 'Closing the ₹79 Order Gap',
+      overview:
+        'Audited Zepto FY26 unit economics and designed three product levers to close the ~₹79 per-order contribution-margin loss - without ever compromising the 10-minute delivery promise. Revenue had grown sharply, but contribution margin had not.',
+      details: [
+        {
+          heading: 'The North Star',
+          text: 'Contribution margin per order = gross margin + ad revenue - fulfilment, last-mile and dark-store cost - customer incentives. Every bet is judged on its CM/order delta, not GMV.',
+        },
+        {
+          heading: 'The Three Levers',
+          text: 'Margin-aware second tier on the cart milestone ladder; Flexi-Batch opt-in plus 1-tap split-cart consolidation; persona-targeted, outcome-priced ad shelf in the cart and after checkout. Phased rollout with explicit kill criteria, targeting ~₹32/order.',
+        },
+      ],
+      techStack: ['Strategy', 'Growth', 'RICE', 'A/B Testing', 'CM Modeling', 'SQL'],
+    },
+    {
+      tag: 'CASE STUDY - AI PRODUCT DESIGN',
       title: 'Where Is My Material?',
       overview:
-        'Designed an AI copilot in Microsoft Teams that answers everyday material and delivery questions from approved read-only SAP interfaces — turning the informal colleague-as-helpdesk workflow into a governed, trusted assistant.',
+        'Designed an AI copilot in Microsoft Teams that answers everyday material and delivery questions from approved read-only SAP interfaces - turning the informal colleague-as-helpdesk workflow into a governed, trusted assistant.',
       details: [
         {
           heading: 'The Problem',
@@ -124,16 +97,16 @@ const Projects = () => {
         },
         {
           heading: 'Design & Guardrails',
-          text: 'Chose the AI assistant over a process fix, status page or rule bot through a structured options analysis. The assistant only restates facts returned by approved read-only interfaces — it never guesses or calculates quantities. Answers carry the source record and an "as of" time; version 1 is fully read-only; every question type ships with an off switch.',
+          text: 'Chose the AI assistant over a process fix, status page or rule bot through a structured options analysis. The assistant only restates facts returned by approved read-only interfaces - it never guesses or calculates quantities. Answers carry the source record and an "as of" time; version 1 is fully read-only; every question type ships with an off switch.',
         },
       ],
       techStack: ['AI Product', 'LLM', 'Guardrails', 'SAP', 'Teams', 'Product Design'],
     },
     {
-      tag: 'PERSONAL PRODUCT — AI PRODUCT DESIGN',
-      title: 'ResumeIQ — Evidence-Grounded Resume Analyzer',
+      tag: 'PERSONAL PRODUCT - AI PRODUCT DESIGN',
+      title: 'ResumeIQ - Evidence-Grounded Resume Analyzer',
       overview:
-        'Scoped and built a candidate-facing resume-to-JD analyzer for early-career job seekers in India who apply blindly — making trust the core product decision by keeping scoring out of the LLM.',
+        'Scoped and built a candidate-facing resume-to-JD analyzer for early-career job seekers in India who apply blindly - making trust the core product decision by keeping scoring out of the LLM.',
       details: [
         {
           heading: 'The Problem & Trust Decision',
@@ -147,14 +120,14 @@ const Projects = () => {
       techStack: ['Python', 'FastAPI', 'React', 'Ollama', 'LangGraph', 'ChromaDB', 'RAG'],
     },
     {
-      tag: 'CASE STUDY — PRODUCT TEARDOWN — GROWTH',
+      tag: 'CASE STUDY - PRODUCT TEARDOWN - GROWTH',
       title: 'Why My Morning Ride Started Late',
       overview:
-        'Teardown of Rapido Bike booking flow: the app quoted a ~5-minute pickup that reality delivered as a 10-14 minute wait. TL;DR — quoted ~11 min from booking to drop, actual 16-20; time saved vs walking fell from ~14 min to 5-9 min.',
+        'Teardown of Rapido Bike booking flow: the app quoted a ~5-minute pickup that reality delivered as a 10-14 minute wait. TL;DR - quoted ~11 min from booking to drop, actual 16-20; time saved vs walking fell from ~14 min to 5-9 min.',
       details: [
         {
           heading: 'Root Cause & Method',
-          text: 'Investigation labeled OBSERVED / REPORTED / HYPOTHESIS across timed rides, a captain interview and competitor comparison; found manual +₹5 to +₹20 fare top-ups meant every rider tap restarted the captain search, with captains weighing distance, direction and next order — latency nobody had budgeted for.',
+          text: 'Investigation labeled OBSERVED / REPORTED / HYPOTHESIS across timed rides, a captain interview and competitor comparison; found manual +₹5 to +₹20 fare top-ups meant every rider tap restarted the captain search, with captains weighing distance, direction and next order - latency nobody had budgeted for.',
         },
         {
           heading: 'The Fix & The Test',
@@ -164,18 +137,18 @@ const Projects = () => {
       techStack: ['Product Teardown', 'Growth', 'A/B Testing', 'Pricing'],
     },
     {
-      tag: 'CASE STUDY — PRODUCT TEARDOWN — MARKETPLACE',
+      tag: 'CASE STUDY - PRODUCT TEARDOWN - MARKETPLACE',
       title: 'Finding the Right Expert on Topmate',
       overview:
-        'Teardown of Topmate 1:1 career-guidance marketplace from my own seeker testing — 25-30 LinkedIn profiles checked to book just 9 calls; 9 calls booked in 4 days; 5+ missed calls still marked "Completed".',
+        'Teardown of Topmate 1:1 career-guidance marketplace from my own seeker testing - 25-30 LinkedIn profiles checked to book just 9 calls; 9 calls booked in 4 days; 5+ missed calls still marked "Completed".',
       details: [
         {
           heading: 'The Gaps',
-          text: 'Gap 1 — hard to choose: career paths were not shown in a comparable way and ratings were almost all 5.0, so seekers left to check LinkedIn manually. Gap 2 — unreliable record: missed calls were marked "Completed", so ratings, refunds and show-up numbers could not be trusted.',
+          text: 'Gap 1 - hard to choose: career paths were not shown in a comparable way and ratings were almost all 5.0, so seekers left to check LinkedIn manually. Gap 2 - unreliable record: missed calls were marked "Completed", so ratings, refunds and show-up numbers could not be trusted.',
         },
         {
           heading: 'The Fix & The Test',
-          text: 'Three-part fix: (A) seeker filters covering city, field of study, first job, years of experience, company type and visit frequency; (B) AI Compare — seeker shortlists 5-7 experts and gets one side-by-side screen with the AI note on who fits best and why; (C) status page / alerts / rule bot / AI assistant staged by confidence. Build order: verified call status → path card → compare.',
+          text: 'Three-part fix: (A) seeker filters covering city, field of study, first job, years of experience, company type and visit frequency; (B) AI Compare - seeker shortlists 5-7 experts and gets one side-by-side screen with the AI note on who fits best and why; (C) status page / alerts / rule bot / AI assistant staged by confidence. Build order: verified call status → path card → compare.',
         },
       ],
       techStack: ['Marketplace', 'Discovery', 'AI', 'Trust & Safety'],
@@ -191,30 +164,19 @@ const Projects = () => {
           <div className={styles.headerLine}></div>
         </div>
 
-        {/* Flagship featured case study */}
-        <div className={styles.projectsGrid}>
-          <FeaturedCaseStudy
-            tag={zepto.tag}
-            title={zepto.title}
-            overview={zepto.overview}
-            details={zepto.details}
-            techStack={zepto.techStack}
-            githubLink={githubLink}
-          />
-        </div>
-
-        {/* Supporting case studies in a compact 2-column grid */}
-        <div className={styles.caseStudiesGrid}>
-          {compactCases.map((c, i) => (
-            <CompactCaseStudy
-              key={i}
-              tag={c.tag}
-              title={c.title}
-              overview={c.overview}
-              details={c.details}
-              techStack={c.techStack}
-              githubLink={githubLink}
-            />
+        <div className={styles.caseStudiesStack}>
+          {caseStudies.map((c, i) => (
+            <div className={styles.reveal} key={i}>
+              <CaseStudy
+                tag={c.tag}
+                title={c.title}
+                overview={c.overview}
+                details={c.details}
+                techStack={c.techStack}
+                githubLink={githubLink}
+                flagship={c.flagship}
+              />
+            </div>
           ))}
         </div>
       </div>
