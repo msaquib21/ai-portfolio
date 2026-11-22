@@ -182,6 +182,7 @@ const Projects = () => {
                 details={c.details}
                 techStack={c.techStack}
                 githubLink={githubLink}
+                liveLink={c.liveLink}
                 flagship={c.flagship}
               />
             </div>
