@@ -35,15 +35,15 @@
 }
 
 .mainCard {
-  background: linear-gradient(145deg, var(--bg-layer-2, #181828) 0%, var(--bg-deep, #08080f) 100%);
-  border: 1px solid var(--border-medium, rgba(255, 255, 255, 0.1));
+  background: linear-gradient(145deg, var(--bg-layer-2, #f2f4fa) 0%, var(--bg-deep, #f7f8fc) 100%);
+  border: 1px solid var(--border-medium, rgba(15, 23, 42, 0.18));
   border-radius: var(--radius-xl, 2rem);
   position: relative;
   overflow: hidden;
   box-shadow: 
-    -20px -20px 60px rgba(255, 255, 255, 0.02),
-    20px 20px 60px rgba(0, 0, 0, 0.8),
-    inset 1px 1px 20px rgba(255, 255, 255, 0.05);
+    -20px -20px 60px rgba(15, 23, 42, 0.04),
+    20px 20px 60px rgba(15, 23, 42, 0.06),
+    inset 1px 1px 20px rgba(255, 255, 255, 0.6);
   transform-style: preserve-3d;
 }
 
@@ -51,7 +51,7 @@
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+  background: radial-gradient(circle at 20% 20%, rgba(15, 23, 42, 0.04) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .gradientText {
-  background: linear-gradient(90deg, var(--accent, #00e5bf), var(--accent-secondary, #7c5cfc));
+  background: linear-gradient(90deg, var(--accent, #0d9488), var(--accent-secondary, #7c5cfc));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -89,7 +89,7 @@
 
 .subtitle {
   font-size: 1.125rem;
-  color: var(--text-secondary, #a0a0b0);
+  color: var(--text-secondary, #475569);
   line-height: 1.6;
   max-width: 450px;
 }
@@ -116,26 +116,26 @@
 }
 
 .primaryButton {
-  background-color: var(--accent, #00e5bf);
-  color: var(--bg-deep, #08080f);
+  background-color: var(--accent, #0d9488);
+  color: var(--text-inverse, #0f172a);
   border: none;
-  box-shadow: var(--shadow-glow, 0 0 20px rgba(0, 229, 191, 0.4));
+  box-shadow: var(--shadow-glow, 0 0 20px rgba(13, 148, 136, 0.25));
 }
 
 .primaryButton:hover {
-  background-color: #fff;
-  box-shadow: var(--shadow-glow-strong, 0 0 30px rgba(0, 229, 191, 0.6));
+  background-color: var(--accent, #0d9488);
+  box-shadow: var(--shadow-glow-strong, 0 0 30px rgba(13, 148, 136, 0.35));
   transform: translateY(-2px);
 }
 
 .secondaryButton {
-  background-color: var(--bg-layer-3, #25253a);
-  color: var(--text-primary, #ffffff);
-  border: 1px solid var(--border-medium, rgba(255, 255, 255, 0.1));
+  background-color: var(--bg-layer-3, #e9edf6);
+  color: var(--text-primary, #0f172a);
+  border: 1px solid var(--border-medium, rgba(15, 23, 42, 0.18));
 }
 
 .secondaryButton:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--bg-layer-2, #f2f4fa);
   transform: translateY(-2px);
 }
 
@@ -164,8 +164,8 @@
 }
 
 .tile {
-  background-color: var(--bg-elevated, #1e1e32);
-  border: 1px solid var(--border-medium, rgba(255, 255, 255, 0.1));
+  background-color: var(--bg-elevated, #ffffff);
+  border: 1px solid var(--border-medium, rgba(15, 23, 42, 0.18));
   padding: 1.25rem 1.5rem;
   border-radius: var(--radius-md, 0.75rem);
   display: flex;
@@ -173,25 +173,25 @@
   gap: 0.5rem;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  box-shadow: var(--shadow-depth-1, 0 10px 20px rgba(0,0,0,0.3));
+  box-shadow: var(--shadow-depth-1, 0 10px 20px rgba(15, 23, 42, 0.06));
 }
 
 a.tile:hover {
   transform: translateX(10px);
-  border-color: var(--accent, #00e5bf);
-  box-shadow: -5px 10px 20px rgba(0,0,0,0.4);
+  border-color: var(--accent, #0d9488);
+  box-shadow: -5px 10px 20px rgba(15, 23, 42, 0.08);
 }
 
 .tileLabel {
   font-family: var(--font-mono, monospace);
   font-size: 0.75rem;
-  color: var(--text-muted, #707080);
+  color: var(--text-muted, #8a94a6);
   letter-spacing: 0.05em;
 }
 
 .tileValue {
   font-size: 1.1rem;
-  color: var(--text-primary, #ffffff);
+  color: var(--text-primary, #0f172a);
   font-weight: 500;
 }
 
@@ -208,16 +208,16 @@ a.tile:hover .tileValue {
   justify-content: space-between;
   align-items: center;
   padding-top: 2rem;
-  border-top: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.05));
+  border-top: 1px solid var(--border-subtle, rgba(15, 23, 42, 0.08));
   font-family: var(--font-mono, monospace);
   font-size: 0.85rem;
-  color: var(--text-muted, #707080);
+  color: var(--text-muted, #8a94a6);
 }
 
 .backToTop {
   background: none;
   border: none;
-  color: var(--text-secondary, #a0a0b0);
+  color: var(--text-secondary, #475569);
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
@@ -226,7 +226,7 @@ a.tile:hover .tileValue {
 }
 
 .backToTop:hover {
-  color: var(--accent, #00e5bf);
+  color: var(--accent, #0d9488);
 }
 
 @media (max-width: 992px) {

@@ -43,33 +43,33 @@ const Typewriter = ({ strings }) => {
 const EXPERTISE_CARDS = [
   {
     icon: 'genai',
-    title: 'Agentic AI & LLMs',
+    title: 'AI Product Design',
     color: 'var(--accent-secondary, #7c5cfc)',
-    items: ['LangGraph Stateful Pipelines', 'Local LLMs (Ollama) & Azure OpenAI', 'Prompt Engineering & ReAct Loops']
+    items: ['Copilot Design · SAP', 'LLM Evals & Guardrails', 'Hybrid LLM + Deterministic']
   },
   {
     icon: 'rag',
-    title: 'Document AI & RAG',
-    color: 'var(--accent, #00e5bf)',
-    items: ['Pydantic Schema Validation', 'Multi-Query RAG & RRF Fusion', '97% Recall · 62% Latency Reduction']
+    title: 'Product Strategy & Discovery',
+    color: 'var(--accent, #0d9488)',
+    items: ['RICE & Prioritization', 'PRDs & JTBD', 'Roadmapping']
   },
   {
     icon: 'data',
-    title: 'Data Engineering',
+    title: 'Experimentation & Metrics',
     color: 'var(--accent-warm, #ff6b4a)',
-    items: ['Azure Databricks & SQL Warehouse', 'ETL/ELT Pipelines (DLT)', 'DuckDB / MySQL / PostgreSQL']
+    items: ['A/B Test Design & Sizing', 'Contribution Margin', 'Funnel & Guardrails']
   },
   {
     icon: 'backend',
-    title: 'Backend & APIs',
-    color: 'var(--accent, #00e5bf)',
-    items: ['FastAPI + Pydantic v2', 'REST APIs & WSO2 IAM (RBAC)', 'Docker & Git/GitHub']
+    title: 'Delivery & Technical Leverage',
+    color: 'var(--accent, #0d9488)',
+    items: ['Cross-functional Delivery', 'SAP · WMS Integrations', 'API Enablement']
   },
   {
     icon: 'analytics',
-    title: 'Investigation & Systems',
+    title: 'Analytics & Insight',
     color: 'var(--accent-secondary, #7c5cfc)',
-    items: ['Deterministic Reconciliation', '93+ Automated Tests & Golden Suites', 'Power BI & DAX Dashboards']
+    items: ['SQL · Product Analytics', 'Event Instrumentation', 'Root-Cause Analysis']
   }
 ];
 
@@ -133,10 +133,10 @@ const Hero = ({ onOpenChat }) => {
   };
 
   const roles = [
-    'Data & Application Engineer',
-    'GenAI Engineer',
-    'LLM Builder',
-    'RAG Systems Architect'
+    'Product Manager',
+    'Technical Product Manager',
+    'AI Product Manager',
+    'Product-minded Engineer'
   ];
 
   return (
@@ -145,7 +145,7 @@ const Hero = ({ onOpenChat }) => {
         <div className={styles.contentLeft}>
           <div className={styles.statusBadge}>
             <span className={styles.pulseDot}></span>
-            Available for GenAI & Data Engineering roles
+            Available for Product Manager roles
           </div>
 
           <h1 className={styles.title}>
@@ -159,7 +159,7 @@ const Hero = ({ onOpenChat }) => {
           </h2>
 
           <p className={styles.description}>
-            Engineering agentic AI pipelines, LLM-powered automation, and deterministic data platforms at Reliance Industries.
+            Product manager and engineer turning AI ambition and complex systems into shipped products — from discovery and PRDs to experiments and delivery.
           </p>
 
           <div className={styles.actions}>

@@ -3,10 +3,10 @@ import ReactMarkdown from 'react-markdown';
 import styles from './ChatPanel.module.css';
 
 const QUICK_PROMPTS = [
-  { icon: '💻', label: 'Tech Stack', text: 'What is your core tech stack?' },
-  { icon: '🚀', label: 'Key Project', text: 'Tell me about the Databricks Text-to-SQL project.' },
-  { icon: '🤖', label: 'GenAI Work', text: 'How did you use GenAI for MES/WMS integration?' },
-  { icon: '⚡', label: 'Current Role', text: 'What is your role at Reliance Industries?' }
+  { icon: '📊', label: 'Zepto Case', text: 'Walk me through the Zepto contribution-margin case.' },
+  { icon: '🤖', label: 'AI Copilot', text: 'How did you design the SAP AI copilot safely?' },
+  { icon: '🧭', label: 'Discovery', text: 'How do you approach product discovery and prioritization?' },
+  { icon: '🚀', label: 'Current Role', text: 'What is your product work at Reliance Industries?' }
 ];
 
 const ChatPanel = ({ isOpen, onClose }) => {

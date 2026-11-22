@@ -1,104 +1,595 @@
-%PDF-1.4
-%“Œ‹ž ReportLab Generated PDF document (opensource)
+%PDF-1.3
+%âãÏÓ
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R /F3 7 0 R
+/PageMode /UseNone
+/Pages 2 0 R
+/Type /Catalog
 >>
 endobj
 2 0 obj
 <<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+/Count 1
+/Kids [ 3 0 R ]
+/Type /Pages
 >>
 endobj
 3 0 obj
 <<
-/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R ]
+/Contents 9 0 R
+/MediaBox [ 0 0 612 792 ]
+/Parent 2 0 R
+/Resources <<
+/Font 10 0 R
+/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
 >>
 endobj
 4 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://github.com/msaquib21)
->> /Border [ 0 0 0 ] /Rect [ 312.4031 722.44 405.9611 733.6 ] /Subtype /Link /Type /Annot
+/S /URI
+/Type /Action
+/URI (https\072\057\057github\056com\057msaquib21)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 302 736.1 391 746.5 ]
+/Subtype /Link
+/Type /Annot
 >>
 endobj
 5 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://linkedin.com)
->> /Border [ 0 0 0 ] /Rect [ 413.5498 722.44 448.7038 733.6 ] /Subtype /Link /Type /Annot
+/S /URI
+/Type /Action
+/URI (https\072\057\057linkedin\056com)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 399 736.1 450 746.5 ]
+/Subtype /Link
+/Type /Annot
 >>
 endobj
 6 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://ai-portfolio-pi-flax.vercel.app)
->> /Border [ 0 0 0 ] /Rect [ 456.2926 722.44 490.405 733.6 ] /Subtype /Link /Type /Annot
+/S /URI
+/Type /Action
+/URI (https\072\057\057ai\055portfolio\055pi\055flax\056vercel\056app)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 459 736.1 510 746.5 ]
+/Subtype /Link
+/Type /Annot
 >>
 endobj
 7 0 obj
 <<
-/BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+/A <<
+/S /URI
+/Type /Action
+/URI (https\072\057\057ai\055portfolio\055pi\055flax\056vercel\056app)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 492.9 451.95 549 462.35 ]
+/Subtype /Link
+/Type /Annot
 >>
 endobj
 8 0 obj
 <<
-/Annots [ 4 0 R 5 0 R 6 0 R ] /Contents 12 0 R /MediaBox [ 0 0 612 792 ] /Parent 11 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 
-  /Trans <<
-
->> /Type /Page
+/A <<
+/S /URI
+/Type /Action
+/URI (https\072\057\057ai\055resume\055project\055ochre\056vercel\056app\057)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 492.9 364.55 549 374.95 ]
+/Subtype /Link
+/Type /Annot
 >>
 endobj
 9 0 obj
 <<
-/PageMode /UseNone /Pages 11 0 R /Type /Catalog
+/Length 15092
 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+.086275 .231373 .462745 rg
+BT /F2 16.4 Tf 19.68 TL ET
+BT 1 0 0 1 221.2776 753.9948 Tm (MOHAMMAD SAQUIB) Tj T* ET
+0 0 0 rg
+BT /F1 9.4 Tf 11.28 TL ET
+BT 1 0 0 1 119.6121 738.0458 Tm (m.saquib419@gmail.com | +91-9238612129 | github.com/msaquib21 | LinkedIn | Portfolio) Tj T* ET
+.086275 .231373 .462745 rg
+BT /F2 8.4 Tf 10.08 TL ET
+BT 1 0 0 1 49 721.0388 Tm (PROFILE SUMMARY) Tj T* ET
+0 0 0 rg
+BT /F1 7.8 Tf 9.36 TL ET
+BT 1 0 0 1 49 707.9146 Tm (Product-minded Technical Program Manager with 2 years of experience at Reliance Industries turning manufacturing and supply-chain pain points) Tj T* ET
+0 0 0 rg
+BT /F1 7.8 Tf 9.36 TL ET
+BT 1 0 0 1 49 699.2646 Tm (into enterprise digital products. Defines requirements, aligns business, technology and vendor teams on scope and trade-offs, and delivers across) Tj T* ET
+0 0 0 rg
+BT /F1 7.8 Tf 9.36 TL ET
+BT 1 0 0 1 49 690.6146 Tm (SAP, WMS and Databricks. Applies the same discovery-to-metrics thinking in independent product work, including a teardown of Rapido's booking) Tj T* ET
+0 0 0 rg
+BT /F1 7.8 Tf 9.36 TL ET
+BT 1 0 0 1 49 681.9646 Tm (flow with a root-cause analysis, prototype and A/B test plan. Seeking an Associate Product Manager role.) Tj T* ET
+.086275 .231373 .462745 rg
+BT /F2 10.7 Tf 12.84 TL ET
+BT 1 0 0 1 49 665.3649 Tm (WORK EXPERIENCE) Tj T* ET
+.086275 .231373 .462745 RG
+.6 w
+n 49 660.35 m 563 660.35 l S
+0 0 0 rg
+BT /F2 9.7 Tf 11.64 TL ET
+BT 1 0 0 1 64 648.3579 Tm (Reliance Industries Limited | Technical Program Manager) Tj T* ET
+0 0 0 rg
+BT /F1 9.4 Tf 11.28 TL ET
+BT 1 0 0 1 455.47 648.5958 Tm (August 2024 - Present) Tj T* ET
+0 0 0 rg
+BT /F3 9.4 Tf 11.28 TL ET
+BT 1 0 0 1 64 636.8958 Tm (Navi Mumbai, India \(Promoted from Graduate Engineer Trainee\)) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 52 625.3337 Tm (\177) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 625.3337 Tm (Enabled reliable SAP-to-WMS GRN data flow by owning requirements definition and API enablement, aligning business,) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 613.9337 Tm (SAP, security, and vendor teams on scope, field availability, and technical trade-offs.) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 52 600.3337 Tm (\177) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 600.3337 Tm (Digitized supplier quality-document workflows end to end across SQA, SCM, SAP, data engineering, and application teams,) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 588.9337 Tm (enabling automated ingestion and retrieval within manufacturing systems.) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 52 575.3337 Tm (\177) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 575.3337 Tm (Built and deployed a Databricks-based internal product that lets business teams retrieve supplier documents by PO, plant,) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 563.9337 Tm (supplier, and date range, reducing reliance on manual portal search.) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 52 550.3337 Tm (\177) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 550.3337 Tm (Gave leadership supply-chain visibility by contributing to an end-to-end traceability program, mapping data across) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 538.9337 Tm (procurement, POs, shipments, logistics, ASN, and GRN to surface gaps.) Tj T* ET
+0 0 0 rg
+BT /F2 9.7 Tf 11.64 TL ET
+BT 1 0 0 1 64 524.4579 Tm (Indian Institute of Technology, Hyderabad | Research Summer Intern) Tj T* ET
+0 0 0 rg
+BT /F1 9.4 Tf 11.28 TL ET
+BT 1 0 0 1 459.136 524.6958 Tm (May 2023 - July 2023) Tj T* ET
+0 0 0 rg
+BT /F3 9.4 Tf 11.28 TL ET
+BT 1 0 0 1 64 512.9958 Tm (Hyderabad, India \(Remote\)) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 52 501.4337 Tm (\177) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 501.4337 Tm (Implemented a RISC-V ISA simulator in C++ emulating core instruction set architecture behavior, demonstrating low-level) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 490.0337 Tm (systems execution, memory alignment, and computer architecture principles.) Tj T* ET
+.086275 .231373 .462745 rg
+BT /F2 10.7 Tf 12.84 TL ET
+BT 1 0 0 1 49 470.6649 Tm (PROJECTS) Tj T* ET
+.086275 .231373 .462745 RG
+.6 w
+n 49 465.65 m 563 465.65 l S
+0 0 0 rg
+BT /F2 9.7 Tf 11.64 TL ET
+BT 1 0 0 1 64 453.6579 Tm (Rapido Product Teardown | Discovery, Metrics, A/B Test Design, Prototype) Tj T* ET
+.17 .36 .66 rg
+BT /F1 9.4 Tf 11.28 TL ET
+BT 1 0 0 1 493 453.8958 Tm ([Project Link]) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 52 441.6337 Tm (\177) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 441.6337 Tm (Diagnosed why a 2 km Rapido bike-taxi ride takes 10 to 14 minutes to start against a 5-minute app quote by mapping the) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 430.2337 Tm (booking journey and analyzing the captain-decline counter; traced it to riders raising fares blindly, one tap at a time.) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 52 416.6337 Tm (\177) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 416.6337 Tm (Proposed rider-configured auto fare escalation \(interval, step, ceiling, presets\) and built a clickable prototype; defined a) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 405.2337 Tm (ready-on-time success metric with fare-per-km, captain-earnings, and repeat-rate guardrails.) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 52 391.6337 Tm (\177) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 391.6337 Tm (Designed a 2-week A/B test with success thresholds and risks \(fare drift, captain behavior, local supply shift\); published a) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 380.2337 Tm (2-page teardown, 10-slide deck, journey map, and metric tree.) Tj T* ET
+0 0 0 rg
+BT /F2 9.7 Tf 11.64 TL ET
+BT 1 0 0 1 64 366.2579 Tm (ResumeIQ - Evidence-Grounded Resume Analyzer | Python, FastAPI, React, Ollama) Tj T* ET
+.17 .36 .66 rg
+BT /F1 9.4 Tf 11.28 TL ET
+BT 1 0 0 1 493 366.4958 Tm ([Project Link]) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 52 354.2337 Tm (\177) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 354.2337 Tm (Scoped a candidate-facing resume-to-JD analyzer for early-career job seekers in India who apply blindly; defined) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 342.8337 Tm (requirements so every skill match cites its resume line and gaps are reported as "no evidence found", never guessed.) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 52 329.2337 Tm (\177) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 329.2337 Tm (Made trust the core product decision: kept scoring out of the LLM with a deterministic, configurable weighted rubric) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 317.8337 Tm (\(required skills 40%, experience 25%, responsibilities 20%, preferred 10%, qualifications 5%\) and built an Interview) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 306.4337 Tm (Evidence Map tagging each probe strong / thin / exposed as the differentiator over keyword-count ATS tools.) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 52 292.8337 Tm (\177) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 292.8337 Tm (Defined success metrics and guardrails: built an offline eval harness on 4 synthetic, hand-labeled resume cases \(25/25) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 281.4337 Tm (skill-status labels matched\); limited the LLM to JD extraction \(local Ollama by default\) behind a lexicon gate with a) Tj T* ET
+0 0 0 rg
+BT /F1 9.1 Tf 10.92 TL ET
+BT 1 0 0 1 64 270.0337 Tm (deterministic fallback; documented a PRD, decision log and v2 roadmap.) Tj T* ET
+.086275 .231373 .462745 rg
+BT /F2 10.7 Tf 12.84 TL ET
+BT 1 0 0 1 49 250.6649 Tm (PRODUCT & TECHNICAL SKILLS) Tj T* ET
+.086275 .231373 .462745 RG
+.6 w
+n 49 245.65 m 563 245.65 l S
+0 0 0 rg
+BT /F2 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 49 234.3302 Tm (Product) Tj T* ET
+0 0 0 rg
+BT /F2 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 83.8816 234.3302 Tm (Management:) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 141.6994 234.3302 Tm (Requirements) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 197.6166 234.3302 Tm (Gathering,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 240.1608 234.3302 Tm (Product) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 272.1872 234.3302 Tm (Discovery,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 314.7142 234.3302 Tm (PRDs,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 341.9504 234.3302 Tm (User) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 362.4958 234.3302 Tm (Stories,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 394.0406 234.3302 Tm (Prioritization) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 443.74 234.3302 Tm (\(RICE\),) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 474.7946 234.3302 Tm (Product) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 506.821 234.3302 Tm (Metrics,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 539.3118 234.3302 Tm (A/B) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 49 224.2302 Tm (Test) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 68.1178 224.2302 Tm (Design,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 99.6626 224.2302 Tm (Roadmap) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 139.3344 224.2302 Tm (Support,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 174.2332 224.2302 Tm (Product) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 206.2596 224.2302 Tm (Delivery) Tj T* ET
+0 0 0 rg
+BT /F2 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 49 214.1302 Tm (Program) Tj T* ET
+0 0 0 rg
+BT /F2 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 86.754 214.1302 Tm (Management:) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 144.5718 214.1302 Tm (Stakeholder) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 192.8522 214.1302 Tm (Management,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 247.8234 214.1302 Tm (Cross-functional) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 312.3406 214.1302 Tm (Leadership,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 359.6664 214.1302 Tm (Vendor) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 389.7836 214.1302 Tm (Management,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 444.7548 214.1302 Tm (Agile) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 466.2634 214.1302 Tm (Delivery,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 502.0996 214.1302 Tm (UAT,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 49 204.0302 Tm (Dependency) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 99.6712 204.0302 Tm (and) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 116.4068 204.0302 Tm (Risk) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 135.516 204.0302 Tm (Management) Tj T* ET
+0 0 0 rg
+BT /F2 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 49 193.9302 Tm (Technical) Tj T* ET
+0 0 0 rg
+BT /F2 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 91.0626 193.9302 Tm (Product:) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 128.808 193.9302 Tm (API) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 145.062 193.9302 Tm (Integration,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 190.4786 193.9302 Tm (REST) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 215.8056 193.9302 Tm (APIs,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 238.7504 193.9302 Tm (System) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 269.8136 193.9302 Tm (Design,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 301.3584 193.9302 Tm (SQL,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 323.3486 193.9302 Tm (Azure) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 348.2026 193.9302 Tm (Databricks,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 393.602 193.9302 Tm (Power) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 420.3652 193.9302 Tm (BI,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 433.2738 193.9302 Tm (Figma,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 461.9462 193.9302 Tm (Data) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 482.5002 193.9302 Tm (Analytics) Tj T* ET
+0 0 0 rg
+BT /F2 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 49 183.8302 Tm (AI) Tj T* ET
+0 0 0 rg
+BT /F2 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 59.9908 183.8302 Tm (Product:) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 97.7362 183.8302 Tm (Generative) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 142.1896 183.8302 Tm (AI,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 155.0982 183.8302 Tm (LLMs,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 180.9068 183.8302 Tm (RAG) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 201.9338 183.8302 Tm (Systems,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 239.6878 183.8302 Tm (LangChain,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 286.059 183.8302 Tm (LangGraph,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 333.8664 183.8302 Tm (Prompt) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 363.975 183.8302 Tm (Engineering,) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 414.6462 183.8302 Tm (Azure) Tj T* ET
+0 0 0 rg
+BT /F1 8.6 Tf 10.32 TL ET
+BT 1 0 0 1 439.5002 183.8302 Tm (OpenAI) Tj T* ET
+.086275 .231373 .462745 rg
+BT /F2 10.7 Tf 12.84 TL ET
+BT 1 0 0 1 49 169.0649 Tm (EDUCATION) Tj T* ET
+.086275 .231373 .462745 RG
+.6 w
+n 49 164.05 m 563 164.05 l S
+0 0 0 rg
+BT /F2 9.2 Tf 11.04 TL ET
+BT 1 0 0 1 49 152.0544 Tm (National Institute of Technology Raipur, India) Tj T* ET
+0 0 0 rg
+BT /F1 9.2 Tf 11.04 TL ET
+BT 1 0 0 1 77 140.8544 Tm (B.Tech in Computer Science & Engineering | CPI: 7.65) Tj T* ET
+0 0 0 rg
+BT /F3 9.2 Tf 11.04 TL ET
+BT 1 0 0 1 499.8996 140.8544 Tm (2020 - 2024) Tj T* ET
+0 0 0 rg
+BT /F2 9.2 Tf 11.04 TL ET
+BT 1 0 0 1 49 125.1544 Tm (Delhi Public School, Kuwait) Tj T* ET
+0 0 0 rg
+BT /F1 9.2 Tf 11.04 TL ET
+BT 1 0 0 1 77 113.9544 Tm (Class XII \(CBSE\): 90.2%) Tj T* ET
+0 0 0 rg
+BT /F3 9.2 Tf 11.04 TL ET
+BT 1 0 0 1 499.8996 113.9544 Tm (2019 - 2020) Tj T* ET
+0 0 0 rg
+BT /F1 9.2 Tf 11.04 TL ET
+BT 1 0 0 1 77 102.7544 Tm (Class X \(CBSE\): 85.6%) Tj T* ET
+0 0 0 rg
+BT /F3 9.2 Tf 11.04 TL ET
+BT 1 0 0 1 499.8996 102.7544 Tm (2017 - 2018) Tj T* ET
+.086275 .231373 .462745 rg
+BT /F2 10.7 Tf 12.84 TL ET
+BT 1 0 0 1 49 87.2649 Tm (ACHIEVEMENTS & CODING PROFILES) Tj T* ET
+.086275 .231373 .462745 RG
+.6 w
+n 49 82.25 m 563 82.25 l S
+0 0 0 rg
+BT /F1 8.9 Tf 10.68 TL ET
+BT 1 0 0 1 52 70.2923 Tm (\177) Tj T* ET
+0 0 0 rg
+BT /F1 8.9 Tf 10.68 TL ET
+BT 1 0 0 1 64 70.2923 Tm (5 Star Rating at HackerRank in Problem Solving | Global Rank 312 \(Starters 92, Div 4\) at CodeChef) Tj T* ET
+0 0 0 rg
+BT /F1 8.9 Tf 10.68 TL ET
+BT 1 0 0 1 52 58.7923 Tm (\177) Tj T* ET
+0 0 0 rg
+BT /F1 8.9 Tf 10.68 TL ET
+BT 1 0 0 1 64 58.7923 Tm (Coding Profiles: GeeksforGeeks, LeetCode, HackerRank, CodeChef) Tj T* ET
+ 
+
+endstream
 endobj
 10 0 obj
 <<
-/Author (\(anonymous\)) /CreationDate (D:20260926095519+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260926095519+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
+/F1 11 0 R
+/F2 12 0 R
+/F3 13 0 R
 >>
 endobj
 11 0 obj
 <<
-/Count 1 /Kids [ 8 0 R ] /Type /Pages
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 12 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 3794
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
 >>
-stream
-Gau`VgN"3(&q0LUjGPBBCVY@n!Un2UKI&bE@ULf#l[:1((XSqki4bjm@Qo6:<m_@I?o5/Z%YnU,eQ#a"1JaT9Cm'?6VY]OG7&L]Eqq`UIU</WnVr?!58H$Z2c`bRc8uL?]WFbZs0>d/s7bb5<2Dm&&l?)_,>F<sDfI+Or(7D>ZZ-E06X]D4Y3;@aXe&g_E7JHAYHUd&`a.EU75LSV:Rf&*/40)c+8,RXGL1Td3@s%]"-HgNND8R^,dBm+PMTBt#L@(Gk01$RAH'Rd*)BGa)hCN^V]3uV$qg%KIdqH63bM?@b33]1RN+KVO2d-W8X4c^PNi#:,h)SGpm5/YQK;&:?1HL@2RJ:"i[uT/;cR]\pf^P&[rh;=lZehtR[VK'De\No'?QM7t:1cdU05gTZ[uoOh1=agt&VhGL#4\8V#P"!"\4P+rRY3t)7EOsd%toemdUD_1'=ZG>@N9/c<?rM%6doXD:O]turC$VADYg+os/O[(%GPfXgHi'GcYLum55_W<EqtQJR[/LnL@Xm&?His\\o"4tX+]n@RD+D2d!Cqh3mAa/Z$f9C]Oe#"DY?%-aY4:2-YX.h7@'j&b\.h]5q[RFlV-Ak7-mirYm:G-j?XDW5Fr%`Pj(J!CqJMBSnO1qCJV:e0^Xn.-BN+"K2#koQ:%8q,g/n31E#@UN9i+!m.e(,<0oE%)hVnk9A$b-k#E\1K(V_e"1g%X>7o@%g-F#_PFFCc&dEN:(Nc5U^C[rWn>&W*pr0-QO!(Ju=U4oC]BWc,=5!K"_RB*CT=;"5Oi8EF*O6-p-?VP([?Y#OC*+GXmNrl<>Qr2_&VN/2M8Tf4$p<ebaA9Gm_RmDW,>X#kJnkrL&<X4#>XK+L!7G=_URRN%po,0cM'kV.%PL'F8A^i$EZ)eOlEjmH1m"D<&*6]DPY/"a<TJ>)f-Qq7Bi=$)>^0S+"':-X"YE0C;P5Z174Lk]79JbEcO/`!NUFW9Pfm_P_Hh;FO2WGPOfQa8N9AMsD!P9.H#$MZUaako"tX?P-RhcR1_P)bpbJ[&43d6SX"ke0W<1H0o-CKrM@=F0!^*]eHZK<>"n>K&Gqd]L1"L'%jM7\7,i4DtPm&$s[2E>>]&Tj#kG'QuK?R!M!gnUWC)&]/!1"T8N%-N@ZSeg.#;=mKr45?]_IG%D<BX.CQfJ'*YOq;eJ!.u3$K<2gp]C3s%KO-*k7B&UA>3;($/E<+YHcIohhWuUoj)0`8:;anR/Iu9,+t)&0&Np*'R9c+iD#?5BBmpO,fI\a@H1er1e9BECHo@j6**sPM#"WS_YOMi*K,P^qtoNW%hKLbZJp+bfo+A)F(>=KMCSeLHM>_e\\n+"2@[=2N:I*(i-M\nC(%iFaXkma'ZdZ(ri?;\E]Hc]^7?aKrcgccRt1ch"$Bg6l<)-sD=L&lZaAG7!BhSmAVLCrO\0mGh'_IC1ed?1maqP[KC,_g,7taM)*SH@S>WDt5-gjcp\;gO^=krOF3$RUjqg9\6D_rgCTS0XneJYe9`VfsL=D.X["q^_iH@4ha_6Obo]u;+U-\MdBbDY&3M..s^rpGVKX-',ZG5_1#:kaZ$%PT6($&*,GXJ"(n9-]c(3N`1?\8[5UGQVk)kDc'8sSb?l0;&N5R48,*MZRYXRZEm3LS;`HLj*&PM)s*(Frjii`<95)F9%4e=4psLa'dk!+;_p59Yg/YdE/..>KOpMRAPJ[Es[Qe8Hip['TVPC8bi'naiU,:^,]F$]QE)Ts'eD9f-;(?E)sM79_F9P(U&pWS0?NN-k5)BJAjP(.8>e!HLN,(J6t=TZhqE6_Oln-:,*H/>s%3B0O"oEsP?"KQ>goo7h$cPjed$"(\tY4B5-gWsh;u<VI#CK._N`*_F0M@5*Vm10+!dG-jN%Vn;+DTN8]*=#cMQNbas=5.A5:)-qaUpEnoF#H;\@lFomZjk/[$qm*ElV(6<5`'ef$>*8WZ+4OkAo-_?NCFtT^ZmAcKAWIR(NS]RE#;Oi/2i$H1B;Z[t9E.FBn2kS:mZmfr"9lh.']is(jeKIm`f*q$V53"35a@9]1*sHPY/cAP2_^r<T\`G%OCmc0l?'!:4N&Tt0aRlsE2,nK"K+g+jhE1Pa97=?@)8c*)MYWAKDOa4g5ne[F)[(4qAmjL7+ZZQ[Fs<((GTIC!abM"?3i$TBu*f0pDQV66)n+JObiJi4g&d(VkF\Sg\-tT`K!uSahFX83`$"8lhI5ZiSC4#cl/m@^njKqMNt<aPoS<n(l`)6F^6)q8Eqj2ScQq&\.<hkNad4,i`ARhBGe0l\B+5f1g!Y/ofS%pb+?FtfJ0#Y[sgIR;b?#-DV]'=Zpa82eZt\_E8=?)?4u>K&K3IH#T6D'F)8oFIMcF!d6aYU'2!1NCIie1Z=:Df3sM0p^dVpq+#C\slQV=MgK"<FPsX1]N7XP2(Ap@M&%Oj^n@K/t&TO*6G`Q0^4*LK8%T)#GnM3WK`T1Sd!V]<@=cojK*F2I*15'h=Q-es7F2G`TF*)HN]>L6>,(X:K+=p]m(fhA$9F>,u9/#7QkC+J*lrsag<&NN;ku(IiFF6].ioLf4os%21D,"2p5A?R5kj0`4h4$3E-tYqbB/k0-2^JiKGku59_2lIF@kPK#NB[n=aiQ]_l4c('f)=uSnZqP(%UDJ^fY?UB"]"/#RF>KSV?CDRZg9lbdCaio1D*4/0;j8"oaA,4`JPV61mu5FR3#PnF%H^Q2,%<j[ipfQD?^h5CVJtC5T7sVC[SU]6PMgmJY\@Xm[ttql)5nVfGnn2ni]?J+p0$o=K)#.qKY&rR)^O^nE2jXR4alAWj@fmi3"F][FO]X1f'`pY\(/CQe\+-lXm,T4ZtJrOm@pAI[c/CVl:BOA&cDSHc<f=8Wb1&6*"\*IBY!nD.I1An5t?pkH6m>_W=NCX+hquDs>bNL'kk8*\9(+A<Z1(!hT*9;nu,N5i*U3Jl^(i3[HcMpF`TQ^$_!%57N@b,Dsig/&h,1MU2F\4>,:k0g-tsd9i)O_Qe7jLS[[q6C#5_p22nhUgb930+dPADIbmOn)3XqahMN-\W"-&qE`Yn;@4NVp6`4`9"2/W$`1,r)/AAZs2[2uPh!P4'!3KAkl+]hCl)76KPZ9Sg5PKF]"Q1oXf/A"6IuURZF2B$kbSYeQ(UlKmj:0\j+/U6G=sWV,3@"hR@SckpPIP%0/p>`"cQIWfE:'L$((38r@1]*:EUWmgV^5_K%!?B)UtIiI8F?TMmBA\<6/'N.*J<P*g`ZI(pr[Ca)I+*4,Z;+:rB"LBTaY"iS/k1TFJlrc@$9/FI#1$VDUCFo!eC@;;Ba&_%c=MR5".g_+!j90T3l3]=C]0XkGSQV182[Y<*V,?QD5Mr^NDe3j!$hTWZ4Z/9bJ+Kh`mq'^9psEptue?T.;T)"0T6)JeHB/nA0PYmI2S#+MTH']iG*lig#,rihSpIo5ZHn;^Z][s;NR;bg9km]=Mem"Xi1H['"3)4$toAc*S.k!'u)002'@e)%GBc'M,IgkYD54FJQoGsF;l4H7$7;Q`JR(&&onO1<a(I+p</2u_X2=aHcl')ZT#@.$8@*q11mN5juf[=?hQAuG3jnMbloi7\m#(IW$HX#@iU`NX*B=IJR>`-JD)T^PdkWk!5@>p'(WNc+;pd/TqlftWu7OnQKSZbb0Ph2JMo%u1$-R]b3;Aj\b+T;(([h"0:'_p32K3#="l>(=;WdfiNP;DgQ</OCCBVFNIt1=nX5*[\AXFNMPZT2'V50P<iq$e7(9P/CXHkFbd]U?.gbR1Oh&9>`O!bg!^dHq3?thQ`AFs$C?jRBuRo/Mq3tmR+2W%r,\a=9~>endstream
+endobj
+13 0 obj
+<<
+/BaseFont /Helvetica-Oblique
+/Encoding /WinAnsiEncoding
+/Name /F3
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+14 0 obj
+<<
+/Author (Mohammad Saquib)
+/CreationDate (D\07220261102035411\05300\04700\047)
+/Creator (anonymous)
+/Keywords ()
+/ModDate (D\07220261102035411\05300\04700\047)
+/Producer (ReportLab PDF Library \055 \050opensource\051)
+/Subject (unspecified)
+/Title (Mohammad Saquib \055 Product Resume)
+/Trapped /False
+>>
 endobj
 xref
-0 13
+0 15
 0000000000 65535 f 
-0000000061 00000 n 
-0000000112 00000 n 
-0000000219 00000 n 
-0000000331 00000 n 
-0000000506 00000 n 
-0000000673 00000 n 
-0000000858 00000 n 
-0000000973 00000 n 
-0000001198 00000 n 
-0000001267 00000 n 
-0000001548 00000 n 
-0000001608 00000 n 
+0000000015 00000 n 
+0000000083 00000 n 
+0000000142 00000 n 
+0000000374 00000 n 
+0000000553 00000 n 
+0000000721 00000 n 
+0000000920 00000 n 
+0000001123 00000 n 
+0000001333 00000 n 
+0000016478 00000 n 
+0000016533 00000 n 
+0000016641 00000 n 
+0000016754 00000 n 
+0000016870 00000 n 
 trailer
 <<
-/ID 
-[<c590a2eb04e72dd0f682c8dc6911184c><c590a2eb04e72dd0f682c8dc6911184c>]
-% ReportLab generated PDF document -- digest (opensource)
-
-/Info 10 0 R
-/Root 9 0 R
-/Size 13
+/Size 15
+/Root 1 0 R
+/Info 14 0 R
+/ID [ <343b035bc28bbdba78e2604df9f389d0> <343b035bc28bbdba78e2604df9f389d0> ]
 >>
 startxref
-5494
+17193
 %%EOF

@@ -36,7 +36,7 @@
 .headerLine {
   flex-grow: 1;
   height: 1px;
-  background: linear-gradient(90deg, var(--border-medium, #2a2a40), transparent);
+  background: linear-gradient(90deg, var(--border-medium, rgba(15, 23, 42, 0.18)), transparent);
 }
 
 .projectsGrid {
@@ -44,6 +44,46 @@
   flex-direction: column;
   gap: 4rem;
   perspective: 1200px;
+}
+
+.caseStudiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  perspective: 1200px;
+}
+
+.caseStudyCard {
+  background-color: var(--bg-layer-1, #ffffff);
+  border: 1px solid var(--border-subtle, rgba(15, 23, 42, 0.1));
+  border-radius: var(--radius-md, 8px);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-depth-1, 0 4px 6px -1px rgba(15, 23, 42, 0.06));
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.caseStudyCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-depth-2, 0 10px 15px -3px rgba(15, 23, 42, 0.08));
+  border-color: var(--border-medium, rgba(15, 23, 42, 0.18));
+}
+
+.caseStudyCard .projectDetails {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+  .caseStudyCard .projectDetails {
+    grid-template-columns: 1fr;
+  }
+}
+
+.caseStudyTitle {
+  font-size: 1.9rem;
+  color: var(--text-primary, #0f172a);
+  margin: 0 0 1.25rem 0;
+  font-weight: 700;
+  font-family: var(--font-display, sans-serif);
 }
 
 .featuredProject {
@@ -68,15 +108,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, transparent 100%);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.02) 0%, transparent 100%);
   pointer-events: none;
 }
 
 .featuredProject:hover {
   transform: rotateX(0deg) rotateY(0deg) translateY(-5px);
   box-shadow: 
-    0 30px 60px -20px rgba(0, 0, 0, 0.9),
-    -1px 0 30px 0px rgba(0, 229, 191, 0.4);
+    0 30px 60px -20px rgba(15, 23, 42, 0.18),
+    -1px 0 30px 0px rgba(13, 148, 136, 0.3);
 }
 
 .secondaryProject {
@@ -111,7 +151,7 @@
 
 .projectTitle {
   font-size: 2.5rem;
-  color: var(--text-primary, #ffffff);
+  color: var(--text-primary, #0f172a);
   margin: 0 0 1.5rem 0;
   font-weight: 700;
 }
@@ -123,7 +163,7 @@
 .projectOverview {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: var(--text-secondary, #a0aec0);
+  color: var(--text-secondary, #475569);
   margin: 0;
 }
 
@@ -151,26 +191,26 @@
 }
 
 .detailCard {
-  background-color: var(--bg-layer-3, #181828);
+  background-color: var(--bg-layer-3, #e9edf6);
   padding: 1.5rem;
   border-radius: var(--radius-md, 8px);
   box-shadow: 
-    inset 2px 2px 5px rgba(255, 255, 255, 0.02),
-    inset -2px -2px 5px rgba(0, 0, 0, 0.5),
-    0 4px 6px rgba(0, 0, 0, 0.2);
-  border: 1px solid var(--border-dim, #1a1a2e);
+    inset 2px 2px 5px rgba(15, 23, 42, 0.03),
+    inset -2px -2px 5px rgba(15, 23, 42, 0.04),
+    0 4px 6px rgba(15, 23, 42, 0.05);
+  border: 1px solid var(--border-dim, rgba(15, 23, 42, 0.05));
 }
 
 .detailCard h4 {
   font-family: var(--font-mono, monospace);
   font-size: 0.9rem;
-  color: var(--text-primary, #e2e8f0);
+  color: var(--text-primary, #0f172a);
   margin: 0 0 0.75rem 0;
 }
 
 .detailCard p {
   font-size: 0.95rem;
-  color: var(--text-muted, #718096);
+  color: var(--text-muted, #8a94a6);
   margin: 0;
   line-height: 1.5;
 }
@@ -186,19 +226,19 @@
   font-family: var(--font-mono, monospace);
   font-size: 0.8rem;
   padding: 0.4rem 0.8rem;
-  background-color: var(--bg-elevated, #1e1e32);
-  color: var(--text-secondary, #a0aec0);
+  background-color: var(--bg-elevated, #ffffff);
+  color: var(--text-secondary, #475569);
   border-radius: 9999px;
   box-shadow: 
-    inset 1px 1px 3px rgba(0, 0, 0, 0.8),
-    inset -1px -1px 2px rgba(255, 255, 255, 0.05);
+    inset 1px 1px 3px rgba(15, 23, 42, 0.06),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.6);
   border: 1px solid transparent;
   transition: all 0.2s ease;
 }
 
 .techPill:hover {
-  color: var(--accent, #00e5bf);
-  border-color: rgba(0, 229, 191, 0.3);
+  color: var(--accent, #0d9488);
+  border-color: rgba(13, 148, 136, 0.3);
 }
 
 .projectLinks {
@@ -210,7 +250,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--text-primary, #e2e8f0);
+  color: var(--text-primary, #0f172a);
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
@@ -218,7 +258,7 @@
 }
 
 .githubLink:hover {
-  color: var(--accent, #00e5bf);
+  color: var(--accent, #0d9488);
 }
 
 .arrowIcon {

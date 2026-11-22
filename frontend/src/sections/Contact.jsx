@@ -38,11 +38,11 @@ export default function Contact({ onOpenChat }) {
               <div className={styles.leftCol}>
                 <h2 className={styles.heading}>
                   Let's talk about <br />
-                  <span className={styles.gradientText}>AI & data.</span>
+                  <span className={styles.gradientText}>building product.</span>
                 </h2>
                 <p className={styles.subtitle}>
                   Open for opportunities and exciting collaborations.
-                  Reach out or ask my AI assistant for more details about my experience.
+                  Reach out or ask my AI assistant for more details about my experience, case studies and product work.
                 </p>
                 <div className={styles.buttonGroup}>
                   <a href="mailto:m.saquib419@gmail.com" className={styles.primaryButton}>

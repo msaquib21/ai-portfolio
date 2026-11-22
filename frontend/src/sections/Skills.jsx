@@ -2,14 +2,14 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from './Skills.module.css';
 
 const skillsData = {
-  "Languages": ["Python", "SQL", "C++"],
-  "GenAI / LLM": ["LangChain", "LangGraph", "RAG Systems", "Text-to-SQL", "ChromaDB", "Pinecone", "Prompt Engineering", "Azure OpenAI", "Ollama", "HuggingFace"],
-  "Data Engineering": ["Azure Databricks", "SQL Warehouse", "Databricks Apps", "DLT", "ETL/ELT", "DuckDB", "MySQL", "PostgreSQL", "Power BI", "DAX"],
-  "Tools & Cloud": ["Azure", "Docker", "Git/GitHub", "REST APIs", "WSO2 IAM", "FastAPI", "Pydantic", "Postman", "Figma"]
+  "Product Craft": ["Product Discovery", "PRDs & Functional Specs", "Root-Cause Analysis", "Wireframing & Prototyping", "Prioritization & Phased Rollouts", "UAT & Delivery"],
+  "Data & Experimentation": ["SQL", "Product Analytics (PostHog / Mixpanel)", "Event Instrumentation", "A/B Test Design & Sizing", "Product Metrics & Guardrails", "Azure Databricks"],
+  "AI Product": ["LLM Evals & Golden Datasets (Promptfoo / Langfuse)", "AI Guardrails & Fallbacks", "Prompt Engineering & Structured Outputs", "Cost/Latency Optimization", "Hybrid LLM/Deterministic Design"],
+  "Technical & Tools": ["REST APIs (Postman / OpenAPI)", "Enterprise Integrations (SAP, WMS, MES)", "Python", "Figma", "Jira", "Notion", "GitHub"]
 };
 
 const Skills = () => {
-  const [activeTab, setActiveTab] = useState("Languages");
+  const [activeTab, setActiveTab] = useState("Product Craft");
   const sectionRef = useRef(null);
   const gridRef = useRef(null);
 
@@ -49,7 +49,7 @@ const Skills = () => {
       <div className={styles.container}>
         <div className={`${styles.header} ${styles.reveal}`}>
           <span className={styles.sectionNumber}>04</span>
-          <h2 className={styles.sectionTitle}>TECH STACK</h2>
+          <h2 className={styles.sectionTitle}>PRODUCT &amp; TECH STACK</h2>
           <div className={styles.headerLine}></div>
         </div>
 

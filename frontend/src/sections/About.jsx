@@ -71,17 +71,17 @@ const About = () => {
       <div className={styles.content}>
         <div className={`${styles.bioCard} ${styles.tiltIn}`}>
           <p className={styles.bioText}>
-            I'm Mohammad Saquib, a Data & Application Engineer at Reliance Industries in Navi Mumbai, promoted from Graduate Engineer Trainee. I engineer production-grade agentic AI pipelines and deterministic data systems — including an agentic document-extraction pipeline using LangGraph, Pydantic, and local LLMs achieving 97% field-level recall, 92% routing accuracy, and a 62% latency reduction via template caching.
+            I'm Mohammad Saquib, a product-minded engineer turned Product Manager based in Navi Mumbai. At Reliance Industries, I spent two years turning manufacturing and supply-chain pain points into enterprise digital products — defining requirements, aligning business, technology and vendor teams, and delivering measurable outcomes across SAP, WMS and Databricks. I now apply the same discovery-to-metrics discipline to product work: teardowns, PRDs, experiments and AI copilots.
           </p>
           <p className={styles.bioText}>
-            I also engineered a Python-based supply-chain root-cause analysis engine for ASN/GRN discrepancies with deterministic transaction attribution, delivery-to-MSEG tracing, and 93 automated test scenarios. My flagship project is the Agentic Resume Analyzer — a 3-node LangGraph evaluation pipeline with multi-query RAG, Reciprocal Rank Fusion, SSE streaming, and local LLM inference via Ollama. B.Tech in CS from NIT Raipur.
+            My independent product work includes a Rapido booking-flow teardown (root cause, prototype, A/B plan), the Zepto contribution-margin case study, an AI copilot design for SAP called "Where Is My Material?", and a Topmate marketplace teardown. B.Tech in CS from NIT Raipur.
           </p>
         </div>
 
         <div className={styles.infoGrid}>
-          <Card label="Current" value="Data & Application Engineer, Reliance Industries" />
-          <Card label="Focus" value="Agentic AI · Document Intelligence · Data Systems" />
-          <Card label="Systems" value="LangGraph · Pydantic · Python · Databricks" />
+          <Card label="Current" value="Technical Program Manager, Reliance Industries" />
+          <Card label="Focus" value="Product Strategy · AI Product · Supply Chain" />
+          <Card label="Systems" value="SAP · WMS · Databricks · Product Craft" />
           <Card label="Education" value="B.Tech CSE, NIT Raipur" />
         </div>
       </div>

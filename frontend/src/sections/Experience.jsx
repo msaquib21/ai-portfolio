@@ -39,7 +39,7 @@ const Experience = () => {
             
             <div className={styles.cardHeader}>
               <div className={styles.roleInfo}>
-                <h3 className={styles.roleTitle}>Data & Application Engineer</h3>
+                <h3 className={styles.roleTitle}>Technical Program Manager</h3>
                 <span className={styles.companyName}>Reliance Industries</span>
               </div>
               <span className={styles.dateRange}>Aug 2024 - Present</span>
@@ -47,28 +47,30 @@ const Experience = () => {
 
             <div className={styles.subCardsGrid}>
               <div className={styles.subCard}>
-                <h4 className={styles.subCardTitle}>Agentic AI & Document Intelligence</h4>
+                <h4 className={styles.subCardTitle}>Enterprise Product Delivery · SAP, WMS & Databricks</h4>
                 <p className={styles.subCardDesc}>
-                  Built an agentic document-extraction pipeline using LangGraph, Pydantic & a local LLM — achieving 97% field-level recall, 92% routing accuracy on a variance-aware evaluation suite, with template-caching cutting extraction latency 62% on recurring vendor formats.
+                  Owned requirements definition and API enablement for the SAP-to-WMS GRN data flow, aligning business, SAP, security and vendor teams on scope and technical trade-offs; digitized supplier quality-document workflows end to end across SQA, SCM, SAP, data engineering and application teams.
                 </p>
                 <ul className={styles.stackList}>
-                  <li className={styles.stackPill}>LangGraph</li>
-                  <li className={styles.stackPill}>Pydantic</li>
-                  <li className={styles.stackPill}>Local LLM</li>
-                  <li className={styles.stackPill}>FastAPI</li>
+                  <li className={styles.stackPill}>SAP</li>
+                  <li className={styles.stackPill}>WMS</li>
+                  <li className={styles.stackPill}>REST APIs</li>
+                  <li className={styles.stackPill}>Databricks</li>
+                  <li className={styles.stackPill}>Jira</li>
                 </ul>
               </div>
               
               <div className={styles.subCard}>
-                <h4 className={styles.subCardTitle}>Supply-Chain Investigation & Data Engineering</h4>
+                <h4 className={styles.subCardTitle}>AI Product Development</h4>
                 <p className={styles.subCardDesc}>
-                  Engineered a Python-based ASN/GRN investigation engine with transaction attribution, deterministic reconciliation & evidence provenance — 93 automated tests and golden evaluation scenarios. Built an ASN Attachment App on Azure Databricks with automated data-ingestion pipelines.
+                  Built the product foundation for agentic AI: an agentic document-extraction pipeline via LangGraph, Pydantic and local LLMs achieving 97% field-level recall, 92% routing accuracy, with template caching cutting extraction latency 62%; plus a deterministic supply-chain investigation engine with 93 automated tests.
                 </p>
                 <ul className={styles.stackList}>
+                  <li className={styles.stackPill}>LangGraph</li>
+                  <li className={styles.stackPill}>Pydantic</li>
                   <li className={styles.stackPill}>Python</li>
-                  <li className={styles.stackPill}>Databricks</li>
-                  <li className={styles.stackPill}>REST APIs</li>
-                  <li className={styles.stackPill}>WSO2 IAM</li>
+                  <li className={styles.stackPill}>Local LLM</li>
+                  <li className={styles.stackPill}>FastAPI</li>
                 </ul>
               </div>
             </div>
