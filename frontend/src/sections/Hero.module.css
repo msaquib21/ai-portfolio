@@ -323,3 +323,83 @@
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
   }
 }
+
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: auto;
+    padding: 5.5rem 1.25rem 3.5rem;
+  }
+
+  .container {
+    gap: 2.5rem;
+  }
+
+  .contentLeft {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .statusBadge {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    margin-bottom: 20px;
+    gap: 8px;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: clamp(2.4rem, 11vw, 3.25rem);
+    margin-bottom: 12px;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+    min-height: 1.8em;
+  }
+
+  .description {
+    font-size: 1.02rem;
+    line-height: 1.6;
+    max-width: 100%;
+    margin-bottom: 28px;
+  }
+
+  .actions {
+    gap: 10px;
+    width: 100%;
+  }
+
+  .btnPrimary,
+  .btnSecondary,
+  .btnOutline {
+    padding: 12px 18px;
+    font-size: 0.96rem;
+  }
+
+  .contentRight {
+    width: 100%;
+  }
+
+  .cardScene {
+    width: 100%;
+    max-width: 320px;
+    height: 220px;
+  }
+
+  .isoCard {
+    padding: 20px;
+  }
+
+  .cardHeader {
+    margin-bottom: 16px;
+  }
+
+  .cardHeader h3 {
+    font-size: 1.2rem;
+  }
+
+  .cardTech li {
+    font-size: 0.96rem;
+  }
+}

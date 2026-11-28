@@ -13,7 +13,7 @@ const About = () => {
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      { threshold: 0.01, rootMargin: '0px 0px -20px 0px' }
     );
 
     const elements = document.querySelectorAll(`.${styles.tiltIn}`);
@@ -25,7 +25,7 @@ const About = () => {
   }, []);
 
   const handleMouseMove = (e, ref) => {
-    if (!ref.current) return;
+    if (!ref.current || window.innerWidth <= 900) return;
     const rect = ref.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;

@@ -243,27 +243,69 @@
 /* ─── Responsive ─── */
 @media (max-width: 640px) {
   .section {
-    padding: 80px 16px;
+    padding: 3.5rem 1.25rem;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 1.85rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
   }
 
   .demoCard {
-    padding: 20px;
+    padding: 1.25rem;
   }
 
   .questionTabs {
     flex-direction: column;
+    gap: 8px;
+    margin-bottom: 1.25rem;
   }
 
   .qTab {
     white-space: normal;
     text-align: left;
+    font-size: 0.88rem;
+    padding: 8px 14px;
   }
 
   .userBubble {
     max-width: 95%;
+    font-size: 0.95rem;
+    padding: 12px 14px;
   }
 
   .aiBubble {
     max-width: 100%;
+    gap: 10px;
+  }
+
+  .aiAvatar {
+    width: 28px;
+    height: 28px;
+  }
+
+  .cubeFace1 { transform: translateZ(14px); }
+  .cubeFace2 { transform: rotateY(90deg) translateZ(14px); }
+  .cubeFace3 { transform: rotateY(180deg) translateZ(14px); }
+
+  .aiText {
+    font-size: 0.95rem;
+    padding: 12px 14px;
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+
+  .tryButton {
+    padding: 12px 20px;
+    font-size: 0.98rem;
+    width: 100%;
+    justify-content: center;
   }
 }

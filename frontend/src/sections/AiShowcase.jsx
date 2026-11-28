@@ -31,7 +31,7 @@ function AiShowcase({ onOpenChat }) {
   useEffect(() => {
     const obs = new IntersectionObserver(
       ([e]) => { if (e.isIntersecting) setVisible(true); },
-      { threshold: 0.15 }
+      { threshold: 0.01, rootMargin: '0px 0px -20px 0px' }
     );
     if (sectionRef.current) obs.observe(sectionRef.current);
     return () => obs.disconnect();

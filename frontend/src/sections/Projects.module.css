@@ -3,6 +3,7 @@
   background-color: var(--bg-deep, #fafaf7);
   color: var(--text-primary, #e2e8f0);
   font-family: var(--font-body, system-ui, sans-serif);
+  overflow-x: hidden;
 }
 
 .container {
@@ -207,20 +208,8 @@
   margin-bottom: 2.5rem;
 }
 
-@media (max-width: 768px) {
-  .projectDetails {
-    grid-template-columns: 1fr;
-  }
-}
-
 .secondaryProject .projectDetails {
   grid-template-columns: repeat(3, 1fr);
-}
-
-@media (max-width: 768px) {
-  .secondaryProject .projectDetails {
-    grid-template-columns: 1fr;
-  }
 }
 
 .detailCard {
@@ -327,7 +316,116 @@
 }
 
 @media (max-width: 768px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .header {
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .sectionNumber {
+    font-size: 1.15rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.55rem;
+    letter-spacing: 0.03em;
+  }
+
+  .projectsGrid,
+  .caseStudiesStack {
+    gap: 1.5rem;
+  }
+
+  .caseStudiesGrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .caseStudyCard {
+    padding: 1.25rem;
+  }
+
+  .projectHeader {
+    margin-bottom: 1.25rem;
+  }
+
+  .projectTag {
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+  }
+
+  .caseStudyTitle {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .projectOverview {
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  .projectDetails,
   .secondaryProject .projectDetails {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .detailCard {
+    padding: 1rem;
+    min-width: 0;
+  }
+
+  .detailCard h4 {
+    font-size: 0.92rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .detailCard p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .techStack {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .techPill {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.65rem;
+  }
+
+  .cardFooter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .githubLink {
+    font-size: 1rem;
+  }
+
+  .featuredProject,
+  .secondaryProject {
+    padding: 1.5rem;
+  }
+
+  .featuredProject,
+  .featuredProject.reveal,
+  .featuredProject.reveal.isVisible {
+    transform: none;
+  }
+
+  .projectTitle,
+  .secondaryProject .projectTitle {
+    font-size: 1.55rem;
   }
 }

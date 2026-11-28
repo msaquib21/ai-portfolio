@@ -218,11 +218,50 @@
 }
 
 @media (max-width: 768px) {
+  .educationSection {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .grid {
+    gap: 1.75rem;
+  }
+
+  .eduCard {
+    transform: translateY(20px);
+    perspective: none;
+  }
+
   .cardInner {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1.5rem;
-    gap: 1.5rem;
+    padding: 1.35rem;
+    gap: 1rem;
+  }
+
+  .iconArea {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .iconSvg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .institution {
+    font-size: 1.3rem;
+  }
+
+  .degree {
+    font-size: 1.02rem;
+  }
+
+  .period {
+    font-size: 0.88rem;
   }
   
   .detailsRow {
